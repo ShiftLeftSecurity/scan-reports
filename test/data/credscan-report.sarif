@@ -1,0 +1,152 @@
+{
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Secrets audit by gitleaks",
+          "rules": [
+            {
+              "id": "",
+              "name": "AWS Manager ID",
+              "helpUri": "https://stackoverflow.com/search?q=shiftleft/sast-scan+gitleaks++AWS Manager ID"
+            }
+          ]
+        }
+      },
+      "conversion": {
+        "tool": {
+          "driver": {
+            "name": "@ShiftLeft/sast-scan"
+          }
+        },
+        "invocation": {
+          "arguments": [
+            "--depth=2",
+            "--repo-path=/app",
+            "--redact",
+            "--timeout=2m",
+            "--report=/reports/CodeAnalysisLogs/credscan-report.json",
+            "--report-format=json"
+          ],
+          "executionSuccessful": true,
+          "commandLine": "--depth=2 --repo-path=/app --redact --timeout=2m --report=/reports/CodeAnalysisLogs/credscan-report.json --report-format=json",
+          "endTimeUtc": "2020-03-26T20:59:44Z",
+          "workingDirectory": {
+            "uri": "https://github.com/AppThreat/WebGoat/blob/90bfa564e2fe78846ee08a8d70f8e9a32e771751"
+          }
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true,
+          "endTimeUtc": "2020-03-26T20:59:44Z",
+          "workingDirectory": {
+            "uri": "https://github.com/AppThreat/WebGoat/blob/90bfa564e2fe78846ee08a8d70f8e9a32e771751"
+          }
+        }
+      ],
+      "properties": {
+        "metrics": {
+          "total": 2,
+          "critical": 0,
+          "high": 2,
+          "medium": 0,
+          "low": 0
+        }
+      },
+      "results": [
+        {
+          "message": {
+            "text": "Commit: 90bfa564e2fe78846ee08a8d70f8e9a32e771751\nLine: aws_access_key_id='REDACTED'\n\nMessage: Merge branch 'develop' of github.com:AppThreat/WebGoat into develop\n."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": ""
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "https://github.com/AppThreat/WebGoat/blob/90bfa564e2fe78846ee08a8d70f8e9a32e771751/README.MD"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": ""
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "LOW",
+            "issue_severity": "HIGH"
+          },
+          "hostedViewerUri": "https://sarifviewer.azurewebsites.net",
+          "ruleId": "",
+          "ruleIndex": 0
+        },
+        {
+          "message": {
+            "text": "Commit: 4ea2e1bc6cf6cf61c544f21e0c6b1206a8bd1abf\nLine: aws_access_key_id='REDACTED'\n\nMessage: Add secret\n."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "region": {
+                  "snippet": {
+                    "text": ""
+                  },
+                  "startLine": 1
+                },
+                "artifactLocation": {
+                  "uri": "https://github.com/AppThreat/WebGoat/blob/90bfa564e2fe78846ee08a8d70f8e9a32e771751/README.MD"
+                },
+                "contextRegion": {
+                  "snippet": {
+                    "text": ""
+                  },
+                  "endLine": 4,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_confidence": "LOW",
+            "issue_severity": "HIGH"
+          },
+          "hostedViewerUri": "https://sarifviewer.azurewebsites.net",
+          "ruleId": "",
+          "ruleIndex": 0
+        }
+      ],
+      "automationDetails": {
+        "description": {
+          "text": "Static Analysis Security Test results using @ShiftLeft/sast-scan"
+        },
+        "guid": "36da734d-dbe3-40bd-9579-739e2bc4ff03"
+      },
+      "versionControlProvenance": [
+        {
+          "branch": "develop",
+          "repositoryUri": "https://github.com/AppThreat/WebGoat",
+          "revisionId": "90bfa564e2fe78846ee08a8d70f8e9a32e771751"
+        }
+      ]
+    }
+  ],
+  "version": "2.1.0",
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "inlineExternalProperties": [
+    {
+      "guid": "36da734d-dbe3-40bd-9579-739e2bc4ff03",
+      "runGuid": "bbcf185e-000e-463a-aa18-2c1dd92134f6"
+    }
+  ]
+}

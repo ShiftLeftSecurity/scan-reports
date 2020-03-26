@@ -8,6 +8,9 @@ def auto_text_highlight(text):
     text = text.replace("In method", "<span class='bg-light chip'>Method</span>")
     text = text.replace("At ", "<span class='bg-light chip'>File</span>")
     text = text.replace("line ", "<span class='bg-light chip'>line</span>")
+    text = text.replace("Commit:", "<span class='bg-light chip'>Commit</span>")
+    text = text.replace("Line:", "<span class='bg-light chip'>Line</span>")
+    text = text.replace("Message:", "<span class='bg-light chip'>Message</span>")
     text = text.replace("\n", "<br/>")
     return text
 

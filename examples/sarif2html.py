@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 import sys
-sys.path.append('..')
+
+sys.path.append("..")
 from reporter.sarif import parse, render_html
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-i', '--input', help='SARIF file path', required=True)
-parser.add_argument('-o', '--output', help='HTML report name', required=True)
+parser.add_argument("-i", "--input", help="SARIF file path", required=True)
+parser.add_argument("-o", "--output", help="HTML report name", required=True)
 args = parser.parse_args()
 if args.input:
     report_data = parse(args.input)
