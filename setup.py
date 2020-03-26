@@ -4,14 +4,14 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="appthreat-scan-reports",
-    version="1.0.1",
-    author="Team AppThreat",
-    author_email="cloud@appthreat.com",
-    description="Library for producing gorgeous html reports from AppThreat scan results. Compatible with SARIF and grafeas format.",
+    name="shiftleft-scan-reports",
+    version="1.0.0",
+    author="Team ShiftLeft",
+    author_email="hello@shiftleft.io",
+    description="Library for producing html reports from ShiftLeft Scan or AppThreat scan results",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/appthreat/scan-reports",
+    url="https://github.com/ShiftLeftSecurity/scan-reports",
     packages=setuptools.find_packages(),
     include_package_data=True,
     install_requires=["Jinja2"],

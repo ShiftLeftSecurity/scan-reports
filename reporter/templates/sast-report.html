@@ -7,13 +7,13 @@
   <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
   <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
-  
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" defer type="text/javascript"></script>
   <style>
     .divider[data-content] {
       margin: 1.6rem 0;
     }
-    
+
     body {
       background-color: #1C253E;
       color: #ffffff;
@@ -41,7 +41,12 @@
     .table tbody tr:nth-child(odd) {
       background-color: rgba(35, 46, 77, 1.00);
     }
-
+    .chip {
+      color: #000000;
+    }
+    .chip.bg-dark {
+      color: #ffffff;
+    }
     a {
       color: #4587D4;
     }
@@ -68,7 +73,7 @@
         <div class="hero-body">
           <h1>SAST Scan Status <button class="btn btn-{% if isError %}error{% else %}success{% endif %} btn-action"><span class="tooltip tooltip-top" data-tooltip="{% if isError %}Issues were found in this run{% else %}No major issues were found{% endif %}"><i class="icon icon-{% if isError %}cross{% else %}check{% endif %}"></i></span></button></h1>
           <p>Report from the scan performed on <span class="text-dark chip"><i class="icon icon-time"> </i>&nbsp; {{ invocation.endTimeUtc|replace("T", " at ")|replace("Z", "") }}</span> for <span class="text-dark chip"><i class="icon icon-link"> </i>&nbsp; <a href="{{ versionControlProvenance.repositoryUri
-          }}">{{ versionControlProvenance.repositoryUri|default('local')}}</a></span> 
+          }}">{{ versionControlProvenance.repositoryUri|default('local')}}</a></span>
           </p>
         </div>
       </div>
@@ -159,7 +164,13 @@
   <details class="accordion" open>
     <summary class="accordion-header">
     <i class="icon icon-arrow-right mr-1"></i>
+      {% if metrics.critical %}
       Key Issues <span class="text-bold">{{ key_issues|length }} / {{ metrics.critical }}</span>
+      {% elif metrics.high %}
+      Top High Vulnerabilities <span class="text-bold">{{ key_issues|length }} / {{ metrics.high }}</span>
+      {% elif metrics.medium %}
+      Top Medium Vulnerabilities <span class="text-bold">{{ key_issues|length }} / {{ metrics.medium }}</span>
+      {% endif %}
   </summary>
     <div class="accordion-body columns col-gapless">
     {% for result in key_issues -%}
@@ -175,7 +186,7 @@
             <div class="tile-content">
               <p class="tile-title text-bold">{{ result.ruleId|default('') }}</p>
               <span><a target="_blank" href="{{ location.physicalLocation.artifactLocation.uri }}">{{ location.physicalLocation.artifactLocation.uri|basename }}</a></span>
-              <p class="tile-subtitle"><div class="">{{ result.message.text|auto_text_highlight|safe }}</div></p>
+              <p class="tile-subtitle"><div class=""><p>{{ result.message.text|auto_text_highlight|safe }}</p></div></p>
 {% set allLines = location.physicalLocation.contextRegion.snippet.text %}
 {% set firstLine = allLines.split("\n")[0].strip() %}
 {% set remLines = "<br/>".join(allLines.split("\n")[1:]) %}
@@ -252,7 +263,7 @@
   </div>
 </div>
 <div class="container grid-xl" style="height: 2rem; color: #bcc3ce;">
-  <p>Thank you for using <a href="https://shiftleft.io" target="_blank">ShiftLeft Scan</a></p>
+  <p>Thank you for using <a href="https://shiftleft.io" target="_blank">ShiftLeft Scan</a>. Looking for a more detailed and intelligent scan? Check out <a href="https://www.shiftleft.io/inspect/" target="_blank">Inspect</a>, our next generation SAST product</p>
 </div>
 
 <script type="text/javascript">
@@ -260,7 +271,7 @@
       const severityCanvas = document.getElementById("severity-chart");
       const severityTable = document.getElementById("severity-table");
       const data = {{ [metrics.critical, metrics.high, metrics.medium, metrics.low] }}
-  
+
       if(severityCanvas && Chart) {
         Chart.platform.disableCSSInjection = true;
         const severityChart = new Chart(severityCanvas, {
