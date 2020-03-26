@@ -1503,11 +1503,13 @@
 <div class="container grid-xl" style="height: 2rem; color: #bcc3ce;">
   <p>Thank you for using <a href="https://shiftleft.io" target="_blank">ShiftLeft Scan</a></p>
 </div>
+
 <script type="text/javascript">
-  window.addEventListener('DOMContentLoaded', (event) => {
-      const severityCanvas = document.getElementById('severity-chart');
-      const severityTable = document.getElementById('severity-table');
-      document.getElementById('severity-chart');
+  window.addEventListener("DOMContentLoaded", function(event) {
+      const severityCanvas = document.getElementById("severity-chart");
+      const severityTable = document.getElementById("severity-table");
+      const data = [30, 50, 0, 0]
+  
       if(severityCanvas && Chart) {
         Chart.platform.disableCSSInjection = true;
         const severityChart = new Chart(severityCanvas, {
@@ -1516,16 +1518,7 @@
               labels: ['Critical', 'High', 'Medium', 'Low'],
               datasets: [{
                   label: 'Severity',
-                  data: [
-                    // { % runs[-1].properties.metrics.critical | 0 -% },
-                    // { % runs[-1].properties.metrics.high | 0 -% },
-                    // { % runs[-1].properties.metrics.medium | 0 -% },
-                    // { % runs[-1].properties.metrics.low | 0 -% }
-                    12,
-                    10,
-                    16,
-                    9
-                  ],
+                  data: data,
                   backgroundColor: [
                       '#e85600', // Critical
                       '#ffb700', // High
@@ -1548,7 +1541,7 @@
                 padding: {
                   left: 50,
                   right: 0,
-                  top: 0,
+                  top: 50,
                   bottom: 0
                 }
               }
