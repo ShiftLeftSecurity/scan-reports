@@ -1,13 +1,9 @@
 # Introduction
 
-This is a library for producing gorgeous html reports from AppThreat scan results. Compatible with SARIF and grafeas format.
+This is a library for producing html reports from ShiftLeft Scan or AppThreat scan results
 
 ## Installation
 
 ```bash
-pip install appthreat-scan-reports
+pip install shiftleft-scan-reports
 ```
-
-## Usage
-
-This package is internally used by [sast-scan](http://github.com/AppThreat/sast-scan), a free open-source Static Analysis Security Testing tool.
