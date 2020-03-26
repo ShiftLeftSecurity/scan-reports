@@ -248,11 +248,14 @@
               <span><a target="_blank" href="{{ location.physicalLocation.artifactLocation.uri }}">{{ location.physicalLocation.artifactLocation.uri|basename }}</a></span>
               <p class="tile-subtitle"><div class=""><p>{{ result.message.text|auto_text_highlight|safe }}</p></div></p>
 {% set allLines = location.physicalLocation.contextRegion.snippet.text %}
+{% set line_count = allLines.split("\n") %}
 {% set firstLine = allLines.split("\n")[0].strip() %}
 {% set remLines = "<br/>".join(allLines.split("\n")[1:]) %}
+{% if line_count|length and allLines != "" %}
 <pre class="code"><code><a target="_blank" class="btn" href="{{ location.physicalLocation.artifactLocation.uri }}#L{{ location.physicalLocation.contextRegion.startLine }}"><i class="icon icon-location"></i> {{ location.physicalLocation.contextRegion.startLine }}:</a> {{ firstLine|safe }}<br/>        {{ remLines|safe }}
 </code>
 </pre>
+{% endif %}
             </div>
           </div>
           {%- endfor %}
@@ -299,6 +302,7 @@
           {% set result_index = loop.index %}
           {% for location in result.locations -%}
           {% set allLines = location.physicalLocation.contextRegion.snippet.text %}
+{% set line_count = allLines.split("\n") %}
 {% set firstLine = allLines.split("\n")[0].strip() %}
 {% set remLines = "<br/>".join(allLines.split("\n")[1:]) %}
           <tr data-tag="tag-{{ result.properties.issue_severity|replace('CRITICAL', '1')|replace('HIGH', '2')|replace('MEDIUM', '3')|replace('LOW', '4') }}" class="filter-item">
@@ -308,7 +312,9 @@
             <td><a target="_blank" class="btn btn-link" href="{{ location.physicalLocation.artifactLocation.uri }}#L{{ location.physicalLocation.contextRegion.startLine }}"><i class="icon icon-link"></i> {{ location.physicalLocation.artifactLocation.uri|basename }}</a></td>
             <td>
               <span style="width:max-content; max-width: 60%;" class="d-inline-block">{{ result.message.text|auto_text_highlight|safe }}</span>
+{% if line_count|length and allLines != "" %}
               <pre class="code" style="width:max-content; max-width: 50%;"><code>{{ firstLine|safe }}<br/>{{ remLines|safe }}</code></pre>
+{% endif %}
             </td>
           </tr>
           {%- endfor %}
@@ -320,8 +326,8 @@
     </div>
   </div>
 </div>
-<div class="container grid-xl" style="height: 2rem; color: #bcc3ce;">
-  <p>Thank you for using <a href="https://shiftleft.io" target="_blank">ShiftLeft Scan</a>. Looking for a more detailed and intelligent scan? Check out <a href="https://www.shiftleft.io/inspect/" target="_blank">Inspect</a>, our next generation SAST product</p>
+<div class="container grid-xl" style="height: 3rem; margin-top: 0.8rem; color: #bcc3ce;">
+  <p>Thank you for using <a href="https://shiftleft.io" target="_blank">ShiftLeft Scan</a>. Looking for a more detailed analysis? Check out <a href="https://www.shiftleft.io/inspect/" target="_blank">Inspect</a>, our next generation SAST product</p>
 </div>
 
 <script type="text/javascript">
