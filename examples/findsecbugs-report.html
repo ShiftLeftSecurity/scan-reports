@@ -6,6 +6,9 @@
   <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
   <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
   <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" defer type="text/javascript"></script>
   <style>
     .divider[data-content] {
       margin: 1.6rem 0;
@@ -113,32 +116,41 @@
         <p>
         Below is a summary of the issues identified:
         </p>
-        <table class="table">
-          <thead>
-          <tr>
-            <th>Severity</th>
-            <th>Count</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td><span class="bg-error chip">CRITICAL</span></td>
-            <td>30</td>
-          </tr><tr>
-            <td><span class="bg-warning chip">HIGH</span></td>
-            <td>50</td>
-          </tr><tr>
-            <td><span class="bg-dark chip">MEDIUM</span></td>
-            <td>0</td>
-          </tr><tr>
-            <td><span class="bg-success chip">LOW</span></td>
-            <td>0</td>
-          </tr><tr>
-            <td><span class="bg-total chip">TOTAL</span></td>
-            <td>80</td>
-          </tr>
-          </tbody>
-        </table>
+        <div class="container">
+          <div class="columns col-12">
+            <div class="column col-5">
+              <table class="table" id="severity-table">
+                <thead>
+                <tr>
+                  <th>Severity</th>
+                  <th>Count</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td><span class="bg-error chip">CRITICAL</span></td>
+                  <td>30</td>
+                </tr><tr>
+                  <td><span class="bg-warning chip">HIGH</span></td>
+                  <td>50</td>
+                </tr><tr>
+                  <td><span class="bg-dark chip">MEDIUM</span></td>
+                  <td>0</td>
+                </tr><tr>
+                  <td><span class="bg-success chip">LOW</span></td>
+                  <td>0</td>
+                </tr><tr>
+                  <td><span class="bg-total chip">TOTAL</span></td>
+                  <td>80</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="column col-6">
+              <canvas id="severity-chart" width="300" height="300"></canvas>
+            </div>
+          </div>
+        </div>
         
       
       <p>&nbsp;</p>
@@ -1491,5 +1503,62 @@
 <div class="container grid-xl" style="height: 2rem; color: #bcc3ce;">
   <p>Thank you for using <a href="https://shiftleft.io" target="_blank">ShiftLeft Scan</a></p>
 </div>
+<script type="text/javascript">
+  window.addEventListener('DOMContentLoaded', (event) => {
+      const severityCanvas = document.getElementById('severity-chart');
+      const severityTable = document.getElementById('severity-table');
+      document.getElementById('severity-chart');
+      if(severityCanvas && Chart) {
+        Chart.platform.disableCSSInjection = true;
+        const severityChart = new Chart(severityCanvas, {
+            type: 'bar',
+            data: {
+              labels: ['Critical', 'High', 'Medium', 'Low'],
+              datasets: [{
+                  label: 'Severity',
+                  data: [
+                    // { % runs[-1].properties.metrics.critical | 0 -% },
+                    // { % runs[-1].properties.metrics.high | 0 -% },
+                    // { % runs[-1].properties.metrics.medium | 0 -% },
+                    // { % runs[-1].properties.metrics.low | 0 -% }
+                    12,
+                    10,
+                    16,
+                    9
+                  ],
+                  backgroundColor: [
+                      '#e85600', // Critical
+                      '#ffb700', // High
+                      '#303742', // Medium
+                      '#32b643' // Low
+                  ],
+                  borderWidth: 1
+              }]
+            },
+            options: {
+              maintainAspectRatio: false,
+              scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+              },
+              layout: {
+                padding: {
+                  left: 50,
+                  right: 0,
+                  top: 0,
+                  bottom: 0
+                }
+              }
+            }
+        });
+        console.log(severityTable.style.width);
+        severityChart.canvas.parentNode.style.width = severityTable.style.width - 10;
+        
+      }
+  });
+</script>
 </body>
 </html>
