@@ -307,10 +307,8 @@
             <td><span class="chip bg-{{ result.properties.issue_severity|auto_colourize }}">{{ result.properties.issue_severity }}</span></td>
             <td><a target="_blank" class="btn btn-link" href="{{ location.physicalLocation.artifactLocation.uri }}#L{{ location.physicalLocation.contextRegion.startLine }}"><i class="icon icon-link"></i> {{ location.physicalLocation.artifactLocation.uri|basename }}</a></td>
             <td>
-              <span style="max-width: 40%;" class="d-inline-block">{{ result.message.text|auto_text_highlight|safe }}</span>
-<pre class="code" style="max-width: 40%;"><code>{{ firstLine|safe }}<br/>{{ remLines|safe }}
-</code>
-</pre>
+              <span style="width:max-content; max-width: 60%;" class="d-inline-block">{{ result.message.text|auto_text_highlight|safe }}</span>
+              <pre class="code" style="width:max-content; max-width: 50%;"><code>{{ firstLine|safe }}<br/>{{ remLines|safe }}</code></pre>
             </td>
           </tr>
           {%- endfor %}
@@ -358,14 +356,15 @@
                     ticks: {
                         beginAtZero: true,
                         fontColor: "white",
-                        fontSize:12
+                        fontSize: 12,
+                        stepSize: 1
                     }
                 }],
                 xAxes: [{
                     ticks: {
                         beginAtZero: true,
                         fontColor: "white",
-                        fontSize:12
+                        fontSize: 12
                     }
                 }]
               },
