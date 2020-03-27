@@ -1,0 +1,54 @@
+<!-- <div class="divider text-center" data-content="Packages List"></div> -->
+  <section id="#all_issues"></section>
+  <div class="columns col-gapless" style="margin-top: 2em;">
+    <div class="column col-12">
+      <h3><i class="icon icon-link"></i> Vulnerable Packages <span class="text-bold">({{ metrics.total }})</span></h3>
+    </div>
+    <div class="column col-12">
+      <div class="filter">
+        <input type="radio" id="tag-0" class="filter-tag" name="filter-radio" hidden checked>
+        <input type="radio" id="tag-1" class="filter-tag" name="filter-radio" hidden>
+        <input type="radio" id="tag-2" class="filter-tag" name="filter-radio" hidden>
+        <input type="radio" id="tag-3" class="filter-tag" name="filter-radio" hidden>
+        <input type="radio" id="tag-4" class="filter-tag" name="filter-radio" hidden>
+
+        <div class="filter-nav">
+          <label class="chip" for="tag-0">All ({{ metrics.total }})</label>
+          <label class="chip" for="tag-1">Critical ({{ metrics.critical }})</label>
+          <label class="chip" for="tag-2">High ({{ metrics.high }})</label>
+          <label class="chip" for="tag-3">Medium ({{ metrics.medium }})</label>
+          <label class="chip" for="tag-4">Low ({{ metrics.low }})</label>
+        </div>
+        <div class="filter-body">
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Severity</th>
+              <th>Id</th>
+              <th>Package</th>
+              <th>Version</th>
+              <th>Risk Score</th>
+              <th>Description</th>
+              <th>More Information</th>
+            </tr>
+            </thead>
+            <tbody>
+          {% for result in datas|sort(attribute="severity") -%}
+          {% set result_index = loop.index %}
+
+          <tr data-tag="tag-{{ result.severity|replace('CRITICAL', '1')|replace('HIGH', '2')|replace('MEDIUM', '3')|replace('LOW', '4') }}" class="filter-item">
+            <td><span class="chip bg-{{ result.severity|auto_colourize }}">{{ result.severity }}</span></td>
+            <td>{{ result.id }}</td>
+            <td>{{ result.package }}</td>
+            <td>{{ result.version }}</td>
+            <td>{{ result.cvss_score }}</td>
+            <td>{{ result.short_description|auto_text_highlight|safe }}</td>
+            <td>{{ result.related_urls|linkify|safe }}</td>
+          </tr>
+          {%- endfor %}
+        </tbody>
+      </table>
+        </div>
+      </div>
+    </div>
+  </div>

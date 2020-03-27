@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="shiftleft-scan-reports",
-    version="1.0.3",
+    version="1.0.4",
     author="Team ShiftLeft",
     author_email="hello@shiftleft.io",
     description="Library for producing html reports from ShiftLeft Scan or AppThreat scan results",
