@@ -17,9 +17,9 @@ env.filters["auto_colourize"] = auto_colourize
 
 def parse(sarif_file):
     """
-
-    :param sarif_file:
-    :return:
+    Parse sarif file
+    :param sarif_file: Sarif file from SAST scan
+    :return: Json data
     """
     report_data = {}
     with open(sarif_file, mode="r") as report_file:
@@ -33,9 +33,10 @@ def parse(sarif_file):
 
 def render_html(report_data, out_file):
     """
-
-    :param report_data:
-    :return:
+    Renders the SAST report data as html
+    :param report_data: Report data from sarif files
+    :param out_file: Output filename
+    :return: HTML contents
     """
     template = env.get_template("sast-report.html")
     try:
