@@ -2,7 +2,7 @@
   <section id="#all_issues"></section>
   <div class="columns col-gapless" style="margin-top: 2em;">
     <div class="column col-12">
-      <h3><i class="icon icon-link"></i> Packages with License Compliance Issues <span class="text-bold">({{ metrics.total }})</span></h3>
+      <h3><i class="icon icon-link"></i> Packages with License Conditions <span class="text-bold">({{ metrics.total }})</span></h3>
     </div>
     <div class="column col-12">
       <div class="filter">
@@ -30,9 +30,9 @@
           <tr>
             <td>{{ result.get("Package") }}</td>
             <td>{{ result.get("Version") }}</td>
-            <td>{{ result.get("License Id") }}</td>
+            <td><a href="https://choosealicense.com/licenses/{{ result.get("License Id").lower() }}" target="_blank"><i class="icon icon-link"></i> {{ result.get("License Id") }}</a></td>
             <td>
-              {% for cond in result.get("License conditions").split(",") -%}
+              {% for cond in result.get("License conditions").replace("library", "(Library)").split(",") -%}
               <span class="chip">{{ cond|replace("-", " ")|title }}</span>
               {%- endfor %}
             </td>
