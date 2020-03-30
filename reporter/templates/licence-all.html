@@ -1,0 +1,46 @@
+<!-- <div class="divider text-center" data-content="Packages List"></div> -->
+  <section id="#all_issues"></section>
+  <div class="columns col-gapless" style="margin-top: 2em;">
+    <div class="column col-12">
+      <h3><i class="icon icon-link"></i> Packages with License Conditions <span class="text-bold">({{ metrics.total }})</span></h3>
+    </div>
+    <div class="column col-12">
+      <div class="filter">
+        <input type="radio" id="tag-0" class="filter-tag" name="filter-radio" hidden checked>
+        <input type="radio" id="tag-1" class="filter-tag" name="filter-radio" hidden>
+        <input type="radio" id="tag-2" class="filter-tag" name="filter-radio" hidden>
+        <input type="radio" id="tag-3" class="filter-tag" name="filter-radio" hidden>
+        <input type="radio" id="tag-4" class="filter-tag" name="filter-radio" hidden>
+
+        <div class="filter-body">
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Package</th>
+              <th>Version</th>
+              <th>Licence Type</th>
+              <th>Licence Conditions</th>
+              <!-- <th>Description</th> -->
+            </tr>
+            </thead>
+            <tbody>
+          {% for result in datas|sort(attribute="Package") -%}
+          {% set result_index = loop.index %}
+
+          <tr>
+            <td>{{ result.get("Package") }}</td>
+            <td>{{ result.get("Version") }}</td>
+            <td><a href="https://choosealicense.com/licenses/{{ result.get("License Id").lower() }}" target="_blank"><i class="icon icon-link"></i> {{ result.get("License Id") }}</a></td>
+            <td>
+              {% for cond in result.get("License conditions").replace("library", "(Library)").split(",") -%}
+              <span class="chip">{{ cond|replace("-", " ")|title }}</span>
+              {%- endfor %}
+            </td>
+          </tr>
+          {%- endfor %}
+        </tbody>
+      </table>
+        </div>
+      </div>
+    </div>
+  </div>

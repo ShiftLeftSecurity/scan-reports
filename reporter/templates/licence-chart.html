@@ -1,0 +1,58 @@
+<script type="text/javascript">
+  window.addEventListener("DOMContentLoaded", function(event) {
+      const licenceCanvas = document.getElementById("licence-chart");
+      const licenseTable = document.getElementById("licence-table");
+      const data = {{ [metrics.get("include-copyright"), metrics.get("same-license"), metrics.get("document-changes"), metrics.get("same-license--library")] }}
+
+      if(licenceCanvas && Chart) {
+        Chart.platform.disableCSSInjection = true;
+        Chart.defaults.global.defaultFontColor='white';
+        const licenceChart = new Chart(licenceCanvas, {
+            type: 'bar',
+            data: {
+              labels: ['Include Copyright', 'Same License', 'Document Changes', 'Same License (Lib)'],
+              datasets: [{
+                  label: 'License Conditions',
+                  data: data,
+                  backgroundColor: [
+                      '#e85600', // Critical
+                      '#ffb700', // High
+                      '#303742', // Medium
+                      '#32b643' // Low
+                  ],
+                  borderWidth: 1
+              }]
+            },
+            options: {
+              maintainAspectRatio: false,
+              scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true,
+                        fontColor: "white",
+                        fontSize: 12,
+                        stepSize: 1
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        beginAtZero: true,
+                        fontColor: "white",
+                        fontSize: 12
+                    }
+                }]
+              },
+              layout: {
+                padding: {
+                  left: 50,
+                  right: 0,
+                  top: 50,
+                  bottom: 0
+                }
+              }
+            }
+        });
+        licenceChart.canvas.parentNode.style.width = licenceTable.style.width - 10;
+      }
+  });
+</script>
