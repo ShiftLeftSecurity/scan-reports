@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include "base.html" %}
+<body>
+<div class="container grid-xl" style="min-height: 90vh;">
+  {% include "header.html" %}
+  <div class="columns">
+    <div class="column col-12">
+      <div class="hero hero-sm">
+        <div class="hero-body">
+          <!-- <h1>License Compliance Status <button class="btn btn-{% if isWarn %}error{% else %}success{% endif %} btn-action"><span class="tooltip tooltip-top" data-tooltip="{% if isWarn %}Issues were found in this run{% else %}No major issues were found{% endif %}"><i class="icon icon-{% if isWarn %}stop{% else %}check{% endif %}"></i></span></button></h1> -->
+          <h1>License Compliance Status <button class="btn btn-{% if isWarn %}error{% else %}success{% endif %} btn-action"><span class="tooltip tooltip-top" data-tooltip="{% if isWarn %}Issues were found in this run{% else %}No major issues were found{% endif %}">{% if isWarn %}🛈{% else %}✓{% endif %}</i></span></button></h1>
+
+          <p>Report from the scan performed on <span class="text-dark chip"><i class="icon icon-time"> </i>&nbsp; {{ scanTime }}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include "licence-summary.html" %}
+  {% include "licence-all.html" %}
+</div>
+<div class="container grid-xl" style="height: 3rem; margin-top: 0.8rem; color: #bcc3ce;">
+  <p>Thank you for using <a href="https://shiftleft.io" target="_blank">ShiftLeft Scan</a>. Interested in a deep vulnerability scanner with higher quality results? Contact us <a href="https://www.shiftleft.io/contact/" target="_blank">here</a></p>
+</div>
+{% include "licence-chart.html" %}
+</body>
+</html>
