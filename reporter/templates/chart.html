@@ -1,0 +1,58 @@
+<script type="text/javascript">
+  window.addEventListener("DOMContentLoaded", function(event) {
+      const severityCanvas = document.getElementById("severity-chart");
+      const severityTable = document.getElementById("severity-table");
+      const data = {{ [metrics.critical, metrics.high, metrics.medium, metrics.low] }}
+
+      if(severityCanvas && Chart) {
+        Chart.platform.disableCSSInjection = true;
+        Chart.defaults.global.defaultFontColor='white';
+        const severityChart = new Chart(severityCanvas, {
+            type: 'bar',
+            data: {
+              labels: ['Critical', 'High', 'Medium', 'Low'],
+              datasets: [{
+                  label: 'Severity',
+                  data: data,
+                  backgroundColor: [
+                      '#e85600', // Critical
+                      '#ffb700', // High
+                      '#303742', // Medium
+                      '#32b643' // Low
+                  ],
+                  borderWidth: 1
+              }]
+            },
+            options: {
+              maintainAspectRatio: false,
+              scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true,
+                        fontColor: "white",
+                        fontSize: 12,
+                        stepSize: 1
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        beginAtZero: true,
+                        fontColor: "white",
+                        fontSize: 12
+                    }
+                }]
+              },
+              layout: {
+                padding: {
+                  left: 50,
+                  right: 0,
+                  top: 50,
+                  bottom: 0
+                }
+              }
+            }
+        });
+        severityChart.canvas.parentNode.style.width = severityTable.style.width - 10;
+      }
+  });
+</script>

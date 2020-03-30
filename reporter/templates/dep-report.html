@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+{% include "base.html" %}
 <body>
-
+<div class="container grid-xl" style="min-height: 90vh;">
+  {% include "header.html" %}
+  <div class="columns">
+    <div class="column col-12">
+      <div class="hero hero-sm">
+        <div class="hero-body">
+          <h1>Dependency Scan Status <button class="btn btn-{% if isError %}error{% else %}success{% endif %} btn-action"><span class="tooltip tooltip-top" data-tooltip="{% if isError %}Issues were found in this run{% else %}No major issues were found{% endif %}"><i class="icon icon-{% if isError %}cross{% else %}check{% endif %}"></i></span></button></h1>
+          <p>Report from the scan performed on <span class="text-dark chip"><i class="icon icon-time"> </i>&nbsp; {{ scanTime }}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include "dep-summary.html" %}
+  {% include "dep-all.html" %}
+</div>
+<div class="container grid-xl" style="height: 3rem; margin-top: 0.8rem; color: #bcc3ce;">
+  <p>Thank you for using <a href="https://shiftleft.io" target="_blank">ShiftLeft Scan</a>. Interested in a deep vulnerability scanner with higher quality results? Contact us <a href="https://www.shiftleft.io/contact/" target="_blank">here</a></p>
+</div>
+{% include "chart.html" %}
 </body>
 </html>

@@ -1,0 +1,10 @@
+{"Package": "jakarta.servlet:jakarta.servlet-api", "Version": "4.0.3", "License Id": "EPL-2.0", "License conditions": "disclose-source, include-copyright, same-license"}
+{"Package": "org.glassfish:jakarta.el", "Version": "3.0.3", "License Id": "EPL-2.0", "License conditions": "disclose-source, include-copyright, same-license"}
+{"Package": "ch.qos.logback:logback-classic", "Version": "1.2.3", "License Id": "EPL-1.0", "License conditions": "disclose-source, include-copyright, same-license"}
+{"Package": "ch.qos.logback:logback-core", "Version": "1.2.3", "License Id": "EPL-1.0", "License conditions": "disclose-source, include-copyright, same-license"}
+{"Package": "jakarta.annotation:jakarta.annotation-api", "Version": "1.3.5", "License Id": "EPL-2.0", "License conditions": "disclose-source, include-copyright, same-license"}
+{"Package": "org.jruby:jruby-complete", "Version": "9.1.17.0", "License Id": "GPL-2.0", "License conditions": "include-copyright, document-changes, disclose-source, same-license"}
+{"Package": "org.jruby:jruby-complete", "Version": "9.1.17.0", "License Id": "LGPL-2.1", "License conditions": "include-copyright, disclose-source, document-changes, same-license--library"}
+{"Package": "org.jruby:jruby-complete", "Version": "9.1.17.0", "License Id": "EPL-2.0", "License conditions": "disclose-source, include-copyright, same-license"}
+{"Package": "org.aspectj:aspectjweaver", "Version": "1.9.4", "License Id": "EPL-1.0", "License conditions": "disclose-source, include-copyright, same-license"}
+{"Package": "jakarta.transaction:jakarta.transaction-api", "Version": "1.3.3", "License Id": "EPL-2.0", "License conditions": "disclose-source, include-copyright, same-license"}
