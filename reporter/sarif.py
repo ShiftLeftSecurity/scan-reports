@@ -4,7 +4,7 @@ from os.path import basename
 
 from jinja2 import Environment, PackageLoader, select_autoescape, exceptions
 
-from reporter.utils import auto_text_highlight, auto_colourize
+from reporter.utils import auto_text_highlight, auto_colourize, linkify_rule
 
 env = Environment(
     loader=PackageLoader("reporter", "templates"),
@@ -13,6 +13,7 @@ env = Environment(
 env.filters["basename"] = basename
 env.filters["auto_text_highlight"] = auto_text_highlight
 env.filters["auto_colourize"] = auto_colourize
+env.filters["linkify_rule"] = linkify_rule
 
 
 def parse(sarif_file):

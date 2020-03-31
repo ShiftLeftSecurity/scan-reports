@@ -45,10 +45,20 @@ def render_html(licence_data, out_file):
     template = env.get_template("licence-report.html")
     try:
         isWarn = False
-        metrics = {"disclose-source": 0, "include-copyright": 0, "same-license": 0, "document-changes": 0, "same-license--library": 0, "total": 0}
+        metrics = {
+            "include-copyright": 0,
+            "include-copyright--source": 0,
+            "document-changes": 0,
+            "disclose-source": 0,
+            "network-use-disclose": 0,
+            "same-license": 0,
+            "same-license--file": 0,
+            "same-license--library": 0,
+            "total": 0,
+        }
         for data in licence_data:
-            for condition in data.get("License conditions").replace(" ","").split(','):
-                metrics[condition] += 1 
+            for condition in data.get("License conditions").replace(" ", "").split(","):
+                metrics[condition] += 1
             # This is total packages
             metrics["total"] += 1
         if any(v > 0 for v in metrics.values()):
@@ -57,7 +67,7 @@ def render_html(licence_data, out_file):
             datas=licence_data,
             isWarn=isWarn,
             metrics=metrics,
-            total = metrics["total"],
+            total=metrics["total"],
             scanTime=datetime.now().strftime("%Y-%m-%d at %H:%M"),
         )
     except exceptions.TemplateSyntaxError as te:
