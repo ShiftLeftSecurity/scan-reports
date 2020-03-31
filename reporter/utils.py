@@ -61,3 +61,20 @@ def linkify(links_list):
         else:
             flist.append(html_link % dict(href=link, text=link))
     return "<br/>".join(flist)
+
+
+def linkify_rule(ruleId, rules):
+    """
+    Converts ruleId in to links
+    :param ruleId: Rule Id
+    :param rules: Rules list from SARIF file
+    :return: ruleId converted into a link
+    """
+    html_link = """<span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="%(href)s" target="_blank">%(text)s</a></span>"""
+    for rule in rules:
+        if rule.get("id") == ruleId:
+            text = rule.get("name")
+            if not text:
+                text = ruleId
+            return html_link % dict(href=rule.get("helpUri"), text=text)
+    return ruleId

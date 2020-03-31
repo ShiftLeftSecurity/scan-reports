@@ -7,6 +7,7 @@
 {% set results = run.results %}
 {% set metrics = run.properties.metrics %}
 {% set tool = run.tool %}
+{% set rules = tool.driver.rules %}
 {% set isError = True if metrics.critical > 0 or metrics.high > 0 or metrics.medium > 5 else False %}
 {% set versionControlProvenance = run.versionControlProvenance[-1] %}
 <div class="container grid-xl" style="min-height: 90vh;">
@@ -192,7 +193,7 @@
 {% set firstLine = allLines.split("\n")[0].strip() %}
 {% set remLines = "<br/>".join(allLines.split("\n")[1:]) %}
           <tr data-tag="tag-{{ result.properties.issue_severity|replace('CRITICAL', '1')|replace('HIGH', '2')|replace('MEDIUM', '3')|replace('LOW', '4') }}" class="filter-item">
-            <td>{{ result.ruleId|default('') }}
+            <td>{{ result.ruleId|default('')|linkify_rule(rules)|safe }}
             </td>
             <td><span class="chip bg-{{ result.properties.issue_severity|auto_colourize }}">{{ result.properties.issue_severity }}</span></td>
             <td><a target="_blank" class="btn btn-link" href="{{ location.physicalLocation.artifactLocation.uri }}#L{{ location.physicalLocation.contextRegion.startLine }}"><i class="icon icon-link"></i> {{ location.physicalLocation.artifactLocation.uri|basename }}</a></td>
