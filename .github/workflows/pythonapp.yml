@@ -37,6 +37,7 @@ jobs:
         output: reports
         type: python,credscan
       env:
+        DISABLE_TELEMETRY: "true"
         SCAN_ID: ${{ github.sha }}
         WORKSPACE: https://github.com/${{ github.repository }}/blob/${{ github.sha }}
     - name: Self dep-scan
