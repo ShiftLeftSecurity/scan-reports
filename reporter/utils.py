@@ -27,7 +27,7 @@ def auto_colourize(text):
     :param text:
     :return:
     """
-    text = text.lower()
+    text = text.lower().strip()
     if text == "critical":
         return "error"
     if text == "high":

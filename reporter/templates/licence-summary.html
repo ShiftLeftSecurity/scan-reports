@@ -26,11 +26,13 @@
                 </tr>
                 </thead>
                 <tbody>
-                {% for cond in ["include-copyright", "same-license", "document-changes", "same-license--library"] -%}
+                {% for cond in ["disclose-source", "network-use-disclose", "same-license", "same-license--file", "same-license--library", "document-changes"] -%}
+                {% if metrics.get(cond) %}
                 <tr>
                   <td><span class="chip">{{ cond|replace("-", " ")|replace("library", "(Library)")|title }}</span></td>
                   <td>{{ metrics.get(cond)|default('NA') }}</td>
                 </tr>
+                {% endif %}
                 {%- endfor %}
                 </tbody>
               </table>
@@ -43,7 +45,7 @@
         {% endif %}
       {% if isWarn %}
       <p>&nbsp;</p>
-        <p><i class="icon icon-flag icon-2x text-warning"></i>&nbsp; ShiftLeft Scan recommends an audit of the licenses of the identified packages by a qualified legal professional before distributing this application. Please note that this report is not a legal advice!</p>
+        <p><i class="icon icon-flag icon-2x text-warning"></i>&nbsp; ShiftLeft recommends an audit of the licenses of the identified packages by a qualified legal professional before distributing this application. Please note that this report is not legal advice!</p>
       {% else %}
       <p>&nbsp;</p>
       <p><i class="icon icon-check icon-2x text-success"></i>&nbsp; Based on this report, the application is certified as ready for deployment to test and production environments. Please refer to the SAST and container scan reports (if available) for additional context.</p>
