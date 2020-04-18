@@ -1,6 +1,6 @@
-from datetime import datetime
 import json
 import logging
+from datetime import datetime
 from os.path import basename
 
 from jinja2 import Environment, PackageLoader, select_autoescape, exceptions

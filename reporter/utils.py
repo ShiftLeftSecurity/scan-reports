@@ -78,3 +78,14 @@ def linkify_rule(ruleId, rules):
                 text = ruleId
             return html_link % dict(href=rule.get("helpUri"), text=text)
     return ruleId
+
+
+def remove_end_period(text):
+    """
+    Remove the period from the end of a sentence
+    :param text: Text to check
+    :return: Text with end period removed
+    """
+    if text.endswith("."):
+        return text[:-1]
+    return text
