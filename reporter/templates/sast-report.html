@@ -133,7 +133,7 @@
             <div class="tile-content flex-column flex-grow">
               <p class="tile-title text-bold">{{ result.ruleId|default('') }}</p>
               <span><a target="_blank" href="{{ location.physicalLocation.artifactLocation.uri }}">{{ location.physicalLocation.artifactLocation.uri|basename }}</a></span>
-              <p class="tile-subtitle"><div class=""><p>{{ result.message.text|auto_text_highlight|safe }}</p></div></p>
+              <p class="tile-subtitle"><div class=""><p>{%  if result.message.markdown %}{{ result.message.markdown|remove_end_period|markdown }}{%  else %}{{ result.message.text|auto_text_highlight|safe }}{%  endif %}</p></div></p>
 {% set allLines = location.physicalLocation.contextRegion.snippet.text %}
 {% set line_count = allLines.split("\n") %}
 {% set firstLine = allLines.split("\n")[0].strip() %}
@@ -198,7 +198,7 @@
             <td><span class="chip bg-{{ result.properties.issue_severity|auto_colourize }}">{{ result.properties.issue_severity }}</span></td>
             <td><a target="_blank" class="btn btn-link" href="{{ location.physicalLocation.artifactLocation.uri }}#L{{ location.physicalLocation.contextRegion.startLine }}"><i class="icon icon-link"></i> {{ location.physicalLocation.artifactLocation.uri|basename }}</a></td>
             <td>
-              <span style="width:max-content; max-width: 60%;" class="d-inline-block">{{ result.message.text|auto_text_highlight|safe }}</span>
+              <span style="width:max-content; max-width: 60%;" class="d-inline-block">{%  if result.message.markdown %}{{ result.message.markdown|remove_end_period|markdown }}{%  else %}{{ result.message.text|auto_text_highlight|safe }}{% endif %}</span>
 {% if line_count|length and allLines != "" %}
               <pre class="code" style="width:max-content; max-width: 50%;"><code>{{ firstLine|safe }}<br/>{{ remLines|safe }}</code></pre>
 {% endif %}

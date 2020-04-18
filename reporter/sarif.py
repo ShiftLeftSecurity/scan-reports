@@ -2,18 +2,28 @@ import json
 import logging
 from os.path import basename
 
-from jinja2 import Environment, PackageLoader, select_autoescape, exceptions
+import markdown
+from jinja2 import Environment, PackageLoader, select_autoescape, exceptions, Markup
 
-from reporter.utils import auto_text_highlight, auto_colourize, linkify_rule
+from reporter.utils import (
+    auto_text_highlight,
+    auto_colourize,
+    linkify_rule,
+    remove_end_period,
+)
+
+md = markdown.Markdown(extensions=["meta"])
 
 env = Environment(
     loader=PackageLoader("reporter", "templates"),
     autoescape=select_autoescape(["html"]),
 )
+env.filters["markdown"] = lambda text: Markup(md.convert(text))
 env.filters["basename"] = basename
 env.filters["auto_text_highlight"] = auto_text_highlight
 env.filters["auto_colourize"] = auto_colourize
 env.filters["linkify_rule"] = linkify_rule
+env.filters["remove_end_period"] = remove_end_period
 
 
 def parse(sarif_file):
