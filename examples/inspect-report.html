@@ -166,30 +166,33 @@
       font-weight: bold;
     }
 
+    .table-data-row:nth-child(odd) {
+      background-color: rgba(35, 46, 77, 1);
+    }
+
     .table-data-row > div:nth-child(1),
     .table-header-row > div:nth-child(1) {
       flex: 0 0 20%;
       width: 20%;
-    }
-
-    .table-data-row:nth-child(odd) {
-      background-color: rgba(35, 46, 77, 1);
+      word-wrap: break-word;
     }
 
     .table-data-row > div:nth-child(2),
     .table-header-row > div:nth-child(2) {
       flex: 0 0 10%;
       width: 10%;
+      word-wrap: break-word;
     }
     .table-data-row > div:nth-child(3),
     .table-header-row > div:nth-child(3) {
-      flex: 0 0 10%;
-      width: 10%;
+      flex: 0 0 20%;
+      width: 20%;
+      word-wrap: break-word;
     }
     .table-data-row > div:nth-child(4),
     .table-header-row > div:nth-child(4) {
-      flex: 0 0 60%;
-      width: 60%;
+      flex: 0 0 50%;
+      width: 50%;
     }
     .table-data-row > div span * {
       word-wrap: break-word;
@@ -488,7 +491,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a1-injection+Remote Code Execution: Command Injection through attacker-controlled data via `foo` in `SearchController.doGetSearch`" target="_blank">Remote Code Execution: Command Injection through attacker-controlled data via `foo` in `SearchController.doGetSearch`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a1-injection+Remote Code Execution: Command Injection through attacker-controlled data via `foo` in `SearchController.doGetSearch`" target="_blank">Remote Code Execution</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/SearchController.java#L1"><i class="icon icon-link"></i> SearchController.java</a></div>
             <div class="table-cell">
@@ -508,7 +511,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a1-injection+Remote Code Execution: Command Injection through attacker-controlled data via `foo` in `SearchController.doGetSearch`" target="_blank">Remote Code Execution: Command Injection through attacker-controlled data via `foo` in `SearchController.doGetSearch`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a1-injection+Remote Code Execution: Command Injection through attacker-controlled data via `foo` in `SearchController.doGetSearch`" target="_blank">Remote Code Execution</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/SearchController.java#L1"><i class="icon icon-link"></i> SearchController.java</a></div>
             <div class="table-cell">
@@ -528,7 +531,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/AccountController.java#L1"><i class="icon icon-link"></i> AccountController.java</a></div>
             <div class="table-cell">
@@ -547,7 +550,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/repository/AccountRepository.java#L1"><i class="icon icon-link"></i> AccountRepository.java</a></div>
             <div class="table-cell">
@@ -566,7 +569,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/PatientController.java#L1"><i class="icon icon-link"></i> PatientController.java</a></div>
             <div class="table-cell">
@@ -585,7 +588,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/AccountController.java#L1"><i class="icon icon-link"></i> AccountController.java</a></div>
             <div class="table-cell">
@@ -604,7 +607,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/model/Account.java#L1"><i class="icon icon-link"></i> Account.java</a></div>
             <div class="table-cell">
@@ -623,7 +626,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/repository/AccountRepository.java#L1"><i class="icon icon-link"></i> AccountRepository.java</a></div>
             <div class="table-cell">
@@ -642,7 +645,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -661,7 +664,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a8-deserialization+Deserialization: Deserialization of HTTP data via `request` in `AdminController.doGetPrintSecrets`" target="_blank">Deserialization: Deserialization of HTTP data via `request` in `AdminController.doGetPrintSecrets`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a8-deserialization+Deserialization: Deserialization of HTTP data via `request` in `AdminController.doGetPrintSecrets`" target="_blank">Deserialization</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/AdminController.java#L1"><i class="icon icon-link"></i> AdminController.java</a></div>
             <div class="table-cell">
@@ -679,7 +682,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/model/Account.java#L1"><i class="icon icon-link"></i> Account.java</a></div>
             <div class="table-cell">
@@ -698,7 +701,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a7-XSS+XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`" target="_blank">XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a7-XSS+XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`" target="_blank">XSS</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -716,7 +719,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/repository/AccountRepository.java#L1"><i class="icon icon-link"></i> AccountRepository.java</a></div>
             <div class="table-cell">
@@ -735,7 +738,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/model/Account.java#L1"><i class="icon icon-link"></i> Account.java</a></div>
             <div class="table-cell">
@@ -754,7 +757,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/model/Account.java#L1"><i class="icon icon-link"></i> Account.java</a></div>
             <div class="table-cell">
@@ -773,7 +776,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a7-XSS+XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`" target="_blank">XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a7-XSS+XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`" target="_blank">XSS</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -791,7 +794,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a7-XSS+XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`" target="_blank">XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a7-XSS+XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`" target="_blank">XSS</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -809,7 +812,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a8-deserialization+Deserialization: Deserialization of HTTP data via `request` in `AdminController.doGetPrintSecrets`" target="_blank">Deserialization: Deserialization of HTTP data via `request` in `AdminController.doGetPrintSecrets`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a8-deserialization+Deserialization: Deserialization of HTTP data via `request` in `AdminController.doGetPrintSecrets`" target="_blank">Deserialization</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/AdminController.java#L1"><i class="icon icon-link"></i> AdminController.java</a></div>
             <div class="table-cell">
@@ -827,7 +830,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/model/Account.java#L1"><i class="icon icon-link"></i> Account.java</a></div>
             <div class="table-cell">
@@ -846,7 +849,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a5-broken-access-control+Directory Traversal: HTTP data as file path via `request` in `CustomerController.saveSettings`" target="_blank">Directory Traversal: HTTP data as file path via `request` in `CustomerController.saveSettings`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a5-broken-access-control+Directory Traversal: HTTP data as file path via `request` in `CustomerController.saveSettings`" target="_blank">Directory Traversal</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -864,7 +867,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/AccountController.java#L1"><i class="icon icon-link"></i> AccountController.java</a></div>
             <div class="table-cell">
@@ -883,7 +886,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/repository/AccountRepository.java#L1"><i class="icon icon-link"></i> AccountRepository.java</a></div>
             <div class="table-cell">
@@ -902,7 +905,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a7-XSS+XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`" target="_blank">XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a7-XSS+XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`" target="_blank">XSS</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -920,7 +923,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a5-broken-access-control+Directory Traversal: HTTP data as file path via `request` in `CustomerController.saveSettings`" target="_blank">Directory Traversal: HTTP data as file path via `request` in `CustomerController.saveSettings`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a5-broken-access-control+Directory Traversal: HTTP data as file path via `request` in `CustomerController.saveSettings`" target="_blank">Directory Traversal</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -938,7 +941,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -957,7 +960,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -976,7 +979,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a7-XSS+XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`" target="_blank">XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a7-XSS+XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`" target="_blank">XSS</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -994,7 +997,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/repository/AccountRepository.java#L1"><i class="icon icon-link"></i> AccountRepository.java</a></div>
             <div class="table-cell">
@@ -1013,7 +1016,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/AccountController.java#L1"><i class="icon icon-link"></i> AccountController.java</a></div>
             <div class="table-cell">
@@ -1032,7 +1035,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a7-XSS+XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`" target="_blank">XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a7-XSS+XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`" target="_blank">XSS</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/AccountController.java#L1"><i class="icon icon-link"></i> AccountController.java</a></div>
             <div class="table-cell">
@@ -1050,7 +1053,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/AccountController.java#L1"><i class="icon icon-link"></i> AccountController.java</a></div>
             <div class="table-cell">
@@ -1069,7 +1072,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/repository/CustomerRepository.java#L1"><i class="icon icon-link"></i> CustomerRepository.java</a></div>
             <div class="table-cell">
@@ -1088,7 +1091,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/AccountController.java#L1"><i class="icon icon-link"></i> AccountController.java</a></div>
             <div class="table-cell">
@@ -1107,7 +1110,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/AccountController.java#L1"><i class="icon icon-link"></i> AccountController.java</a></div>
             <div class="table-cell">
@@ -1126,7 +1129,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a7-XSS+XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`" target="_blank">XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a7-XSS+XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`" target="_blank">XSS</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/AccountController.java#L1"><i class="icon icon-link"></i> AccountController.java</a></div>
             <div class="table-cell">
@@ -1144,7 +1147,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a7-XSS+XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`" target="_blank">XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a7-XSS+XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`" target="_blank">XSS</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -1162,7 +1165,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a5-broken-access-control+Directory Traversal: HTTP data as file path via `request` in `CustomerController.saveSettings`" target="_blank">Directory Traversal: HTTP data as file path via `request` in `CustomerController.saveSettings`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a5-broken-access-control+Directory Traversal: HTTP data as file path via `request` in `CustomerController.saveSettings`" target="_blank">Directory Traversal</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -1180,7 +1183,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a8-deserialization+Deserialization: Deserialization of HTTP data via `request` in `AdminController.doGetPrintSecrets`" target="_blank">Deserialization: Deserialization of HTTP data via `request` in `AdminController.doGetPrintSecrets`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a8-deserialization+Deserialization: Deserialization of HTTP data via `request` in `AdminController.doGetPrintSecrets`" target="_blank">Deserialization</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/AdminController.java#L1"><i class="icon icon-link"></i> AdminController.java</a></div>
             <div class="table-cell">
@@ -1198,7 +1201,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a5-broken-access-control+Directory Traversal: HTTP data as file path via `request` in `CustomerController.saveSettings`" target="_blank">Directory Traversal: HTTP data as file path via `request` in `CustomerController.saveSettings`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a5-broken-access-control+Directory Traversal: HTTP data as file path via `request` in `CustomerController.saveSettings`" target="_blank">Directory Traversal</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -1216,7 +1219,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a7-XSS+XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`" target="_blank">XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a7-XSS+XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`" target="_blank">XSS</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -1234,7 +1237,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a7-XSS+XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`" target="_blank">XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a7-XSS+XSS: HTTP data to HTML via `clientId` in `CustomerController.debug`" target="_blank">XSS</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -1252,7 +1255,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a8-deserialization+Deserialization: Deserialization of HTTP data via `request` in `AdminController.doGetPrintSecrets`" target="_blank">Deserialization: Deserialization of HTTP data via `request` in `AdminController.doGetPrintSecrets`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a8-deserialization+Deserialization: Deserialization of HTTP data via `request` in `AdminController.doGetPrintSecrets`" target="_blank">Deserialization</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="javax/servlet/http/HttpSession.java#L1"><i class="icon icon-link"></i> HttpSession.java</a></div>
             <div class="table-cell">
@@ -1270,7 +1273,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/model/Account.java#L1"><i class="icon icon-link"></i> Account.java</a></div>
             <div class="table-cell">
@@ -1289,7 +1292,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-1">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-error">CRITICAL</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/repository/PatientRepository.java#L1"><i class="icon icon-link"></i> PatientRepository.java</a></div>
             <div class="table-cell">
@@ -1308,7 +1311,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/model/Customer.java#L1"><i class="icon icon-link"></i> Customer.java</a></div>
             <div class="table-cell">
@@ -1326,7 +1329,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/model/Address.java#L1"><i class="icon icon-link"></i> Address.java</a></div>
             <div class="table-cell">
@@ -1344,7 +1347,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/model/Account.java#L1"><i class="icon icon-link"></i> Account.java</a></div>
             <div class="table-cell">
@@ -1362,7 +1365,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/model/Customer.java#L1"><i class="icon icon-link"></i> Customer.java</a></div>
             <div class="table-cell">
@@ -1380,7 +1383,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/model/Customer.java#L1"><i class="icon icon-link"></i> Customer.java</a></div>
             <div class="table-cell">
@@ -1398,7 +1401,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/model/Customer.java#L1"><i class="icon icon-link"></i> Customer.java</a></div>
             <div class="table-cell">
@@ -1416,7 +1419,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/model/Address.java#L1"><i class="icon icon-link"></i> Address.java</a></div>
             <div class="table-cell">
@@ -1434,7 +1437,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -1452,7 +1455,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/repository/AccountRepository.java#L1"><i class="icon icon-link"></i> AccountRepository.java</a></div>
             <div class="table-cell">
@@ -1470,7 +1473,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -1488,7 +1491,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -1506,7 +1509,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/model/Customer.java#L1"><i class="icon icon-link"></i> Customer.java</a></div>
             <div class="table-cell">
@@ -1524,7 +1527,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -1542,7 +1545,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/model/Customer.java#L1"><i class="icon icon-link"></i> Customer.java</a></div>
             <div class="table-cell">
@@ -1560,7 +1563,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/repository/CustomerRepository.java#L1"><i class="icon icon-link"></i> CustomerRepository.java</a></div>
             <div class="table-cell">
@@ -1578,7 +1581,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/model/Customer.java#L1"><i class="icon icon-link"></i> Customer.java</a></div>
             <div class="table-cell">
@@ -1596,7 +1599,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/AccountController.java#L1"><i class="icon icon-link"></i> AccountController.java</a></div>
             <div class="table-cell">
@@ -1614,7 +1617,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/repository/AccountRepository.java#L1"><i class="icon icon-link"></i> AccountRepository.java</a></div>
             <div class="table-cell">
@@ -1632,7 +1635,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/AccountController.java#L1"><i class="icon icon-link"></i> AccountController.java</a></div>
             <div class="table-cell">
@@ -1651,7 +1654,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/model/Address.java#L1"><i class="icon icon-link"></i> Address.java</a></div>
             <div class="table-cell">
@@ -1669,7 +1672,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/repository/AccountRepository.java#L1"><i class="icon icon-link"></i> AccountRepository.java</a></div>
             <div class="table-cell">
@@ -1687,7 +1690,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/AccountController.java#L1"><i class="icon icon-link"></i> AccountController.java</a></div>
             <div class="table-cell">
@@ -1705,7 +1708,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/AccountController.java#L1"><i class="icon icon-link"></i> AccountController.java</a></div>
             <div class="table-cell">
@@ -1723,7 +1726,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -1741,7 +1744,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/model/Customer.java#L1"><i class="icon icon-link"></i> Customer.java</a></div>
             <div class="table-cell">
@@ -1759,7 +1762,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/repository/CustomerRepository.java#L1"><i class="icon icon-link"></i> CustomerRepository.java</a></div>
             <div class="table-cell">
@@ -1777,7 +1780,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -1795,7 +1798,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/model/Customer.java#L1"><i class="icon icon-link"></i> Customer.java</a></div>
             <div class="table-cell">
@@ -1813,7 +1816,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -1831,7 +1834,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/AccountController.java#L1"><i class="icon icon-link"></i> AccountController.java</a></div>
             <div class="table-cell">
@@ -1849,7 +1852,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -1867,7 +1870,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/model/Customer.java#L1"><i class="icon icon-link"></i> Customer.java</a></div>
             <div class="table-cell">
@@ -1885,7 +1888,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -1903,7 +1906,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -1921,7 +1924,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/repository/AccountRepository.java#L1"><i class="icon icon-link"></i> AccountRepository.java</a></div>
             <div class="table-cell">
@@ -1939,7 +1942,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/model/Account.java#L1"><i class="icon icon-link"></i> Account.java</a></div>
             <div class="table-cell">
@@ -1957,7 +1960,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -1975,7 +1978,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/model/Customer.java#L1"><i class="icon icon-link"></i> Customer.java</a></div>
             <div class="table-cell">
@@ -1993,7 +1996,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/model/Customer.java#L1"><i class="icon icon-link"></i> Customer.java</a></div>
             <div class="table-cell">
@@ -2011,7 +2014,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -2029,7 +2032,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/repository/CustomerRepository.java#L1"><i class="icon icon-link"></i> CustomerRepository.java</a></div>
             <div class="table-cell">
@@ -2047,7 +2050,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/repository/CustomerRepository.java#L1"><i class="icon icon-link"></i> CustomerRepository.java</a></div>
             <div class="table-cell">
@@ -2065,7 +2068,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/model/Account.java#L1"><i class="icon icon-link"></i> Account.java</a></div>
             <div class="table-cell">
@@ -2083,7 +2086,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-4">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-success">LOW</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -2101,7 +2104,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-3">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-cross-site-scripting+XSS: Attacker controlled, sensitive data to DB via `customer` in `CustomerController.createCustomer`" target="_blank">XSS: Attacker controlled, sensitive data to DB via `customer` in `CustomerController.createCustomer`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-cross-site-scripting+XSS: Attacker controlled, sensitive data to DB via `customer` in `CustomerController.createCustomer`" target="_blank">XSS</a></span></div>
             <div class="table-cell"><span class="chip bg-dark">MEDIUM</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -2116,7 +2119,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-3">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-cross-site-scripting+XSS: Attacker controlled, sensitive data to DB via `customer` in `CustomerController.createCustomer`" target="_blank">XSS: Attacker controlled, sensitive data to DB via `customer` in `CustomerController.createCustomer`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-cross-site-scripting+XSS: Attacker controlled, sensitive data to DB via `customer` in `CustomerController.createCustomer`" target="_blank">XSS</a></span></div>
             <div class="table-cell"><span class="chip bg-dark">MEDIUM</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -2131,7 +2134,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-3">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-cross-site-scripting+XSS: Attacker controlled, sensitive data to DB via `customer` in `CustomerController.createCustomer`" target="_blank">XSS: Attacker controlled, sensitive data to DB via `customer` in `CustomerController.createCustomer`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-cross-site-scripting+XSS: Attacker controlled, sensitive data to DB via `customer` in `CustomerController.createCustomer`" target="_blank">XSS</a></span></div>
             <div class="table-cell"><span class="chip bg-dark">MEDIUM</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -2146,7 +2149,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-3">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a2-broken-authentication+Session Injection: HTTP data to session attribute via `auth` in `AdminController.doPostLogin`" target="_blank">Session Injection: HTTP data to session attribute via `auth` in `AdminController.doPostLogin`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a2-broken-authentication+Session Injection: HTTP data to session attribute via `auth` in `AdminController.doPostLogin`" target="_blank">Session Injection</a></span></div>
             <div class="table-cell"><span class="chip bg-dark">MEDIUM</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/AdminController.java#L1"><i class="icon icon-link"></i> AdminController.java</a></div>
             <div class="table-cell">
@@ -2164,7 +2167,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-3">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-cross-site-scripting+XSS: Attacker controlled, sensitive data to DB via `customer` in `CustomerController.createCustomer`" target="_blank">XSS: Attacker controlled, sensitive data to DB via `customer` in `CustomerController.createCustomer`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-cross-site-scripting+XSS: Attacker controlled, sensitive data to DB via `customer` in `CustomerController.createCustomer`" target="_blank">XSS</a></span></div>
             <div class="table-cell"><span class="chip bg-dark">MEDIUM</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -2179,7 +2182,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-3">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-cross-site-scripting+XSS: Attacker controlled, sensitive data to DB via `customer` in `CustomerController.createCustomer`" target="_blank">XSS: Attacker controlled, sensitive data to DB via `customer` in `CustomerController.createCustomer`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-cross-site-scripting+XSS: Attacker controlled, sensitive data to DB via `customer` in `CustomerController.createCustomer`" target="_blank">XSS</a></span></div>
             <div class="table-cell"><span class="chip bg-dark">MEDIUM</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/controller/CustomerController.java#L1"><i class="icon icon-link"></i> CustomerController.java</a></div>
             <div class="table-cell">
@@ -2194,7 +2197,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-3">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-dark">MEDIUM</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="org/springframework/core/env/Environment.java#L1"><i class="icon icon-link"></i> Environment.java</a></div>
             <div class="table-cell">
@@ -2212,7 +2215,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-3">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-dark">MEDIUM</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="org/springframework/core/env/Environment.java#L1"><i class="icon icon-link"></i> Environment.java</a></div>
             <div class="table-cell">
@@ -2230,7 +2233,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-3">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-dark">MEDIUM</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/repository/AccountRepository.java#L1"><i class="icon icon-link"></i> AccountRepository.java</a></div>
             <div class="table-cell">
@@ -2249,7 +2252,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-3">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-dark">MEDIUM</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/repository/AccountRepository.java#L1"><i class="icon icon-link"></i> AccountRepository.java</a></div>
             <div class="table-cell">
@@ -2268,7 +2271,7 @@
 
 
           <div class="filter-item table-data-row" data-tag="tag-3">
-            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`</a></span></div>
+            <div class="table-cell"><span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="https://stackoverflow.com/search?q=shiftleft/sast-scan+inspect+a3-sensitive-data-exposure+Sensitive Data Leak: Sensitive data is leaked to log in `AccountController.withdrawFromAccount`" target="_blank">Sensitive Data Leak</a></span></div>
             <div class="table-cell"><span class="chip bg-dark">MEDIUM</span></div>
             <div class="table-cell"><a target="_blank" class="btn btn-link" href="io/shiftleft/repository/PatientRepository.java#L1"><i class="icon icon-link"></i> PatientRepository.java</a></div>
             <div class="table-cell">
