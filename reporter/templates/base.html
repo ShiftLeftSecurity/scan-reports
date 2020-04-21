@@ -1,12 +1,28 @@
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>ShiftLeft Scan Report</title>
-  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/spectre.css/dist/spectre.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"
+  />
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" defer type="text/javascript"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+    defer
+    type="text/javascript"
+  ></script>
   <style>
     .divider[data-content] {
       margin: 1.6rem 0;
@@ -44,9 +60,10 @@
     }
 
     body {
-      background-color: #1C253E;
+      background-color: #1c253e;
       color: #ffffff;
-      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+        sans-serif, Apple Color Emoji, Segoe UI Emoji;
       overflow-x: scroll;
       overflow-y: scroll;
     }
@@ -57,43 +74,46 @@
 
     .hero .hero-body {
       padding: 2em;
-      background-color: #3F4861;
+      background-color: #3f4861;
       margin: 2em;
     }
 
     .hero.hero-sm {
       padding-bottom: 0rem;
       padding-top: 0rem;
-      background: #232E4D;
+      background: #232e4d;
     }
 
     .card {
-      background: #232E4D;
+      background: #232e4d;
       border: none;
       padding-left: 1.5em;
     }
 
     .table tbody tr:nth-child(odd) {
-      background-color: rgba(35, 46, 77, 1.00);
+      background-color: rgba(35, 46, 77, 1);
     }
 
     .table tbody tr:nth-child(even) {
-      background-color: #1C253E;
+      background-color: #1c253e;
     }
 
     .chip {
       color: #000000;
+      display: revert;
     }
     .chip.bg-dark {
       color: #ffffff;
     }
     a {
-      color: #4587D4;
+      color: #4587d4;
+      display: revert;
     }
 
-    details, menu {
+    details,
+    menu {
       display: block;
-      background: #232E4D;
+      background: #232e4d;
       margin-top: 2em;
       padding: 1em;
     }
@@ -101,10 +121,99 @@
     .panel {
       border: 0;
       margin: 0.5em;
-      background: #3F4861;
+      background: #3f4861;
     }
     .accordion .accordion-body {
       overflow-y: scroll;
+    }
+    h1 {
+      font-size: 1.8rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+    h3,
+    h4 {
+      font-size: 1.3rem;
+    }
+    .data-table {
+      display: flex;
+      flex-direction: column;
+      max-width: 100vm;
+    }
+    .data-table > .table-head,
+    .data-table > .table-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1 100%;
+    }
+    .table-data-row,
+    .table-header-row {
+      display: flex;
+      flex-direction: row;
+      flex: 1 100%;
+      border-bottom: 0.05rem solid #dadee4;
+    }
+    .table-data-row > div {
+      padding: 0.6rem 0.4rem;
+      overflow: hidden;
+    }
+    .table-header-row > div {
+      padding: 0.6rem 0.4rem;
+      border-bottom-width: 0.1rem;
+      font-weight: bold;
+    }
+
+    .table-data-row:nth-child(odd) {
+      background-color: rgba(35, 46, 77, 1);
+    }
+
+    .table-data-row > div:nth-child(1),
+    .table-header-row > div:nth-child(1) {
+      flex: 0 0 20%;
+      width: 20%;
+      word-wrap: break-word;
+    }
+
+    .table-data-row > div:nth-child(2),
+    .table-header-row > div:nth-child(2) {
+      flex: 0 0 10%;
+      width: 10%;
+      word-wrap: break-word;
+    }
+    .table-data-row > div:nth-child(3),
+    .table-header-row > div:nth-child(3) {
+      flex: 0 0 20%;
+      width: 20%;
+      word-wrap: break-word;
+    }
+    .table-data-row > div:nth-child(4),
+    .table-header-row > div:nth-child(4) {
+      flex: 0 0 50%;
+      width: 50%;
+    }
+    .table-data-row > div span * {
+      word-wrap: break-word;
+    }
+    .table-data-row > div:nth-child(4) {
+      padding: 10px;
+      word-wrap: break-word;
+    }
+    .table-data-row > div:nth-child(4) pre {
+      overflow-x: scroll;
+    }
+
+    .table-data-row h1 {
+      font-size: 1.5rem;
+    }
+
+    .table-data-row h2 {
+      font-size: 1.3rem;
+    }
+
+    .table-data-row h3,
+    .table-data-row h4 {
+      font-size: 1.1rem;
     }
   </style>
 </head>
