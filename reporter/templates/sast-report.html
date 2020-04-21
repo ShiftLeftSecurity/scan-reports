@@ -45,7 +45,7 @@
         </div>
         <div class="card-body">
           <div class=""><strong>Run Id</strong> <span>{{ inlineExternalProperties[-1].runGuid }}</span></div>
-          <div class=""><strong>Directory</strong> <span>{{ invocation.workingDirectory.uri }}</span></div>
+          <div class=""><strong>{% if invocation.workingDirectory.uri.startswith("http") %}URL{% else %}Directory{% endif %}</strong> <span>{{ invocation.workingDirectory.uri }}</span></div>
         </div>
       </div>
     </div>
@@ -127,11 +127,13 @@
         <div class="panel-body flex-column flex-100" style="padding: .8rem;">
           {% for location in result.locations -%}
           <div class="tile flex-column">
-            <div class="tile-icon flex-column">
-              <figure class="bg-{{ result.level }} avatar avatar-lg mr-2" data-initial="{{ result_index }}"></figure>
+            <div class="tile-icon flex-row">
+              <div class="flex-column">
+                <figure class="bg-{{ result.level }} avatar avatar-lg mr-2" data-initial="{{ result_index }}"></figure>
+              </div>
+              <div class="flex-column"> <h3>{{ result.ruleId|default('') }}</h3> </div>
             </div>
             <div class="tile-content flex-column flex-grow">
-              <p class="tile-title text-bold">{{ result.ruleId|default('') }}</p>
               <span><a target="_blank" href="{{ location.physicalLocation.artifactLocation.uri }}">{{ location.physicalLocation.artifactLocation.uri|basename }}</a></span>
               <p class="tile-subtitle"><div class=""><p>{%  if result.message.markdown %}{{ result.message.markdown|remove_end_period|markdown }}{%  else %}{{ result.message.text|auto_text_highlight|safe }}{%  endif %}</p></div></p>
 {% set allLines = location.physicalLocation.contextRegion.snippet.text %}
