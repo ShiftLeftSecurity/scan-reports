@@ -76,7 +76,7 @@ def linkify_rule(ruleId, rules):
             text = rule.get("name")
             if not text:
                 text = ruleId
-            return html_link % dict(href=rule.get("helpUri"), text=text)
+            return html_link % dict(href=rule.get("helpUri"), text=text.split(":")[0])
     return ruleId
 
 
