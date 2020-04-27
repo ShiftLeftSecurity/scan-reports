@@ -70,7 +70,7 @@ def linkify_rule(ruleId, rules):
     :param rules: Rules list from SARIF file
     :return: ruleId converted into a link
     """
-    html_link = """<span class="text-dark chip"><i class="icon icon-bookmark"> </i>&nbsp; <a href="%(href)s" target="_blank">%(text)s</a></span>"""
+    html_link = """<span class="text-dark chip"><a href="%(href)s" target="_blank">%(text)s</a></span>"""
     for rule in rules:
         if rule.get("id") == ruleId:
             text = rule.get("name")
