@@ -201,7 +201,7 @@
             <div class="table-cell">
               <span>{%  if result.message.markdown %}{{ result.message.markdown|remove_end_period|markdown }}{%  else %}{{ result.message.text|auto_text_highlight|safe }}{% endif %}</span>
 {% if line_count|length and allLines != "" %}
-              <pre class="code" style="width:max-content; max-width: 50%;"><code>{{ firstLine|safe }}<br/>{{ remLines|safe }}</code></pre>
+              <pre class="code"><code>{{ firstLine|safe }}<br/>{{ remLines|safe }}</code></pre>
 {% endif %}
             </div>
           </div>
