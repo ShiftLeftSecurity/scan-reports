@@ -1,9 +1,8 @@
 import json
 import logging
 from datetime import datetime
-from os.path import basename
-
 from jinja2 import Environment, PackageLoader, select_autoescape, exceptions
+from os.path import basename
 
 from reporter.utils import auto_text_highlight, auto_colourize, linkify
 
@@ -45,7 +44,14 @@ def render_html(dep_vuln_data, out_file):
     template = env.get_template("dep-report.html")
     try:
         isError = False
-        metrics = {"critical": 0, "high": 0, "medium": 0, "low": 0, "total": 0}
+        metrics = {
+            "critical": 0,
+            "high": 0,
+            "medium": 0,
+            "low": 0,
+            "unspecified": 0,
+            "total": 0,
+        }
         for data in dep_vuln_data:
             metrics[data.get("severity").lower()] += 1
             metrics["total"] += 1

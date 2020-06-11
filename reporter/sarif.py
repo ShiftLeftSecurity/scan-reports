@@ -1,9 +1,8 @@
 import json
 import logging
-from os.path import basename
-
 import markdown
 from jinja2 import Environment, PackageLoader, select_autoescape, exceptions, Markup
+from os.path import basename
 
 from reporter.utils import (
     auto_text_highlight,

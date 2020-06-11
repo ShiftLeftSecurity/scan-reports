@@ -1,9 +1,8 @@
 import json
 import logging
 from datetime import datetime
-from os.path import basename
-
 from jinja2 import Environment, PackageLoader, select_autoescape, exceptions
+from os.path import basename
 
 from reporter.utils import auto_text_highlight, auto_colourize, linkify
 

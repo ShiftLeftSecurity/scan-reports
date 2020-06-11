@@ -26,7 +26,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                {% for sev in ["critical", "high", "medium", "low", "total"] -%}
+                {% for sev in ["critical", "high", "medium", "low", "unspecified", "total"] -%}
                 <tr>
                   <td><span class="bg-{{ sev|auto_colourize }} chip">{{ sev|upper }}</span></td>
                   <td>{{ metrics.get(sev)|default('NA') }}</td>
