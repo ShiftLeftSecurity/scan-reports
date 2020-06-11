@@ -11,6 +11,7 @@
         <input type="radio" id="tag-2" class="filter-tag" name="filter-radio" hidden>
         <input type="radio" id="tag-3" class="filter-tag" name="filter-radio" hidden>
         <input type="radio" id="tag-4" class="filter-tag" name="filter-radio" hidden>
+        <input type="radio" id="tag-5" class="filter-tag" name="filter-radio" hidden>
 
         <div class="filter-nav">
           <label class="chip" for="tag-0">All ({{ metrics.total }})</label>
@@ -18,6 +19,7 @@
           <label class="chip" for="tag-2">High ({{ metrics.high }})</label>
           <label class="chip" for="tag-3">Medium ({{ metrics.medium }})</label>
           <label class="chip" for="tag-4">Low ({{ metrics.low }})</label>
+          <label class="chip" for="tag-5">Unspecified ({{ metrics.unspecified }})</label>
         </div>
         <div class="filter-body">
           <table class="table">
@@ -36,7 +38,7 @@
           {% for result in datas|sort(attribute="severity") -%}
           {% set result_index = loop.index %}
 
-          <tr data-tag="tag-{{ result.severity|replace('CRITICAL', '1')|replace('HIGH', '2')|replace('MEDIUM', '3')|replace('LOW', '4') }}" class="filter-item">
+          <tr data-tag="tag-{{ result.severity|replace('CRITICAL', '1')|replace('HIGH', '2')|replace('MEDIUM', '3')|replace('LOW', '4')|replace('UNSPECIFIED', '5') }}" class="filter-item">
             <td><span class="chip bg-{{ result.severity|auto_colourize }}">{{ result.severity }}</span></td>
             <td>{{ result.id }}</td>
             <td>{{ result.package }}</td>

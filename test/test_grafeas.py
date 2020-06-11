@@ -19,3 +19,4 @@ def test_render(test_gr_file):
     with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", delete=True) as hfile:
         html_content = render_html(report_data, hfile.name)
         assert "{{" not in html_content
+        assert "UNSPECIFIED" in html_content
