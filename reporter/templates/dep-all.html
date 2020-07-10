@@ -29,6 +29,7 @@
               <th>Id</th>
               <th>Package</th>
               <th>Version</th>
+              <th>Fix Version</th>
               <th>Risk Score</th>
               <th>Description</th>
               <th>More Information</th>
@@ -43,6 +44,7 @@
             <td>{{ result.id }}</td>
             <td>{{ result.package }}</td>
             <td>{{ result.version }}</td>
+            <td>{{ result.fix_version }}</td>
             <td>{{ result.cvss_score }}</td>
             <td>{{ result.short_description|auto_text_highlight|safe }}</td>
             <td>{{ result.related_urls|linkify|safe }}</td>
