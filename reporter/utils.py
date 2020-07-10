@@ -1,5 +1,24 @@
 VERBS_LIST = ["affects", "impacts", "impacted", "affected", "upgrade", "downgrade"]
-
+LINK_SOURCES = {
+    "nvd.nist.gov": "CVE",
+    "cve.mitre.org": "CVE",
+    "shiftleft": "ShiftLeft Advisory",
+    "github.com/advisories": "GitHub Advisory",
+    "github.com": "GitHub",
+    "npmjs.com/advisories": "NPM Advisory",
+    "npmjs.com": "NPM",
+    "snyk.io": "Snyk Advisory",
+    "hackerone.com": "Hackerone Report",
+    "secunia.com": "Secunia Report",
+    "apache.org": "Apache",
+    "huawei.com": "Huawei Bulletins",
+    "oracle.com": "Oracle Security",
+    "securityfocus.com": "SecurityFocus",
+    "packetstormsecurity.com": "packet storm",
+    "securitytracker.com": "SecurityTracker",
+    "wooyun.org": "Wooyun",
+    "osvdb.org": "OSVDB"
+}
 
 def auto_text_highlight(text):
     """
@@ -63,16 +82,14 @@ def linkify(links_list):
         return ""
     flist = []
     html_link = """<span class="text-dark chip"><i class="icon icon-link"> </i>&nbsp; <a href="%(href)s" target="_blank">%(text)s</a></span>"""
+    matched = False
     for link in links_list:
-        if "nvd.nist.gov" in link:
-            flist.append(html_link % dict(href=link, text="CVE"))
-        elif "shiftleft" in link:
-            flist.append(html_link % dict(href=link, text="ShiftLeft Advisory"))
-        elif "github.com/advisories" in link:
-            flist.append(html_link % dict(href=link, text="GitHub Advisory"))
-        elif "github.com" in link:
-            flist.append(html_link % dict(href=link, text="GitHub"))
-        else:
+        for k, v in LINK_SOURCES.items():
+            if k in link:
+                matched = True
+                flist.append(html_link % dict(href=link, text=v))
+                break
+        if not matched:
             flist.append(html_link % dict(href=link, text=link))
     return "<br/>".join(flist)
 
