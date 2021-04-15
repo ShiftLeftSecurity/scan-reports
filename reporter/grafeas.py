@@ -1,10 +1,11 @@
 import json
 import logging
 from datetime import datetime
-from jinja2 import Environment, PackageLoader, select_autoescape, exceptions
 from os.path import basename
 
-from reporter.utils import auto_text_highlight, auto_colourize, linkify
+from jinja2 import Environment, PackageLoader, exceptions, select_autoescape
+
+from reporter.utils import auto_colourize, auto_text_highlight, linkify
 
 env = Environment(
     loader=PackageLoader("reporter", "templates"),

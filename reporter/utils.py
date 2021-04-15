@@ -17,8 +17,9 @@ LINK_SOURCES = {
     "packetstormsecurity.com": "packet storm",
     "securitytracker.com": "SecurityTracker",
     "wooyun.org": "Wooyun",
-    "osvdb.org": "OSVDB"
+    "osvdb.org": "OSVDB",
 }
+
 
 def auto_text_highlight(text):
     """

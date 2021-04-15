@@ -3,7 +3,6 @@
       const severityCanvas = document.getElementById("severity-chart");
       const severityTable = document.getElementById("severity-table");
       const data = {{ [metrics.critical, metrics.high, metrics.medium, metrics.low] }}
-
       if(severityCanvas && Chart) {
         Chart.platform.disableCSSInjection = true;
         Chart.defaults.global.defaultFontColor='white';

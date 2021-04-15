@@ -5,11 +5,10 @@
 {% set run = runs[-1] %}
 {% set invocation = run.invocations[-1] %}
 {% set results = run.results %}
-{% set metrics = run.properties.metrics %}
 {% set tool = run.tool %}
 {% set rules = tool.driver.rules %}
 {% set isError = True if metrics.critical > 0 or metrics.high > 0 or metrics.medium > 5 else False %}
-{% set versionControlProvenance = run.versionControlProvenance[-1] %}
+{% set versionControlProvenance = run.versionControlProvenance[-1] if run.versionControlProvenance else {} %}
 <div class="container grid-xl" style="min-height: 90vh;">
   {% include "header.html" %}
   <div class="columns">
@@ -136,12 +135,13 @@
             <div class="tile-content flex-column flex-grow">
               <span><a target="_blank" href="{{ location.physicalLocation.artifactLocation.uri }}">{{ location.physicalLocation.artifactLocation.uri|basename }}</a></span>
               <p class="tile-subtitle"><div class=""><p>{%  if result.message.markdown %}{{ result.message.markdown|remove_end_period|markdown }}{%  else %}{{ result.message.text|auto_text_highlight|safe }}{%  endif %}</p></div></p>
-{% set allLines = location.physicalLocation.contextRegion.snippet.text %}
+{% set contextRegion = location.physicalLocation.contextRegion if location.physicalLocation.contextRegion else location.physicalLocation.region  %}
+{% set allLines = contextRegion.snippet.text %}
 {% set line_count = allLines.split("\n") %}
 {% set firstLine = allLines.split("\n")[0].strip() %}
 {% set remLines = "<br/>".join(allLines.split("\n")[1:]) %}
 {% if line_count|length and allLines != "" %}
-<pre class="code"><code><a target="_blank" class="btn" href="{{ location.physicalLocation.artifactLocation.uri }}#L{{ location.physicalLocation.contextRegion.startLine }}"><i class="icon icon-location"></i> {{ location.physicalLocation.contextRegion.startLine }}:</a> {{ firstLine|safe }}<br/>        {{ remLines|safe }}
+<pre class="code"><code><a target="_blank" class="btn" href="{{ location.physicalLocation.artifactLocation.uri }}#L{{ contextRegion.startLine }}"><i class="icon icon-location"></i> {{ contextRegion.startLine }}:</a> {{ firstLine|safe }}<br/>        {{ remLines|safe }}
 </code>
 </pre>
 {% endif %}
@@ -190,14 +190,15 @@
           {% for result in results|sort(attribute="properties.issue_severity") -%}
           {% set result_index = loop.index %}
           {% for location in result.locations -%}
-          {% set allLines = location.physicalLocation.contextRegion.snippet.text %}
+          {% set contextRegion = location.physicalLocation.contextRegion if location.physicalLocation.contextRegion else location.physicalLocation.region  %}
+          {% set allLines = contextRegion.snippet.text %}
 {% set line_count = allLines.split("\n") %}
 {% set firstLine = allLines.split("\n")[0].strip() %}
 {% set remLines = "<br/>".join(allLines.split("\n")[1:]) %}
           <div class="filter-item table-data-row" data-tag="tag-{{ result.properties.issue_severity|replace('CRITICAL', '1')|replace('HIGH', '2')|replace('MEDIUM', '3')|replace('LOW', '4') }}">
             <div class="table-cell">{{ result.ruleId|default('')|linkify_rule(rules)|safe }}</div>
             <div class="table-cell"><span class="chip bg-{{ result.properties.issue_severity|auto_colourize }}">{{ result.properties.issue_severity }}</span></div>
-            <div class="table-cell"><a target="_blank" class="btn btn-link" href="{{ location.physicalLocation.artifactLocation.uri }}#L{{ location.physicalLocation.contextRegion.startLine }}"><i class="icon icon-link"></i> {{ location.physicalLocation.artifactLocation.uri|basename }}</a></div>
+            <div class="table-cell"><a target="_blank" class="btn btn-link" href="{{ location.physicalLocation.artifactLocation.uri }}#L{{ contextRegion.startLine }}"><i class="icon icon-link"></i> {{ location.physicalLocation.artifactLocation.uri|basename }}</a></div>
             <div class="table-cell">
               <span>{%  if result.message.markdown %}{{ result.message.markdown|remove_end_period|markdown }}{%  else %}{{ result.message.text|auto_text_highlight|safe }}{% endif %}</span>
 {% if line_count|length and allLines != "" %}
@@ -215,7 +216,7 @@
   </div>
 </div>
 <div class="container grid-xl" style="height: 3rem; margin-top: 0.8rem; color: #bcc3ce;">
-  <p>Thank you for using <a href="https://shiftleft.io" target="_blank">ShiftLeft</a>. Looking for a more detailed analysis? Check out ShiftLeft <a href="https://www.shiftleft.io/inspect/" target="_blank">NextGen SAST</a></p>
+  <p>Thank you for using <a href="https://shiftleft.io" target="_blank">ShiftLeft</a>. Looking for a more detailed analysis? Check out ShiftLeft <a href="https://www.shiftleft.io/" target="_blank">NextGen SAST</a> or login to your <a href="https://www.shiftleft.io/dashboard" target="_blank">dashboard</a>.</p>
 </div>
 {% include "chart.html" %}
 </body>
