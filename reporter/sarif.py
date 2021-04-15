@@ -1,12 +1,14 @@
 import json
 import logging
-import markdown
-from jinja2 import Environment, PackageLoader, select_autoescape, exceptions, Markup
+from collections import defaultdict
 from os.path import basename
 
+import markdown
+from jinja2 import Environment, Markup, PackageLoader, exceptions, select_autoescape
+
 from reporter.utils import (
-    auto_text_highlight,
     auto_colourize,
+    auto_text_highlight,
     linkify_rule,
     remove_end_period,
 )
@@ -41,6 +43,23 @@ def parse(sarif_file):
         return report_data
 
 
+def compute_metrics(report_data, results):
+    """
+    Compute summary metrics from results found in the sarif file
+    :param report_data: Report data
+    :param results: Results section from the sarif
+    :return: metrics - dict containing severity as key and count as the value
+    """
+    metrics = {"total": len(results), "critical": 0, "high": 0, "medium": 0, "low": 0}
+    for res in results:
+        severity = res.get("properties").get("issue_severity")
+        severity = severity.lower()
+        if severity == "moderate":
+            severity = "medium"
+        metrics[severity] += 1
+    return metrics
+
+
 def render_html(report_data, out_file):
     """
     Renders the SAST report data as html
@@ -50,11 +69,17 @@ def render_html(report_data, out_file):
     """
     template = env.get_template("sast-report.html")
     try:
-        results = report_data.get("runs")[-1].get("results")
+        run = report_data.get("runs")[-1]
+        results = run.get("results")
         key_issues = [r for r in results if r.get("level") == "error"]
+        metrics = run.get("properties", {}).get("metrics")
+        if not metrics:
+            metrics = compute_metrics(report_data, results)
         if len(key_issues) > 4:
             key_issues = key_issues[:4]
-        report_html = template.render(report_data, key_issues=key_issues)
+        report_html = template.render(
+            report_data, key_issues=key_issues, metrics=metrics
+        )
     except exceptions.TemplateSyntaxError as te:
         logging.warning(te)
         return None
