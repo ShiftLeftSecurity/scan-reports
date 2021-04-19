@@ -56,6 +56,8 @@ def compute_metrics(report_data, results):
         severity = severity.lower()
         if severity == "moderate":
             severity = "medium"
+        if not severity:
+            severity = "low"
         metrics[severity] += 1
     return metrics
 
