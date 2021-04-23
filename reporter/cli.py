@@ -21,7 +21,12 @@ def build_args():
         description="Utility script to convert ShiftLeft NG SAST json output to sarif and html format."
     )
     parser.add_argument(
-        "-a", "--app", dest="app_name", help="App name", default=config.SHIFTLEFT_APP,
+        "-a",
+        "--app",
+        dest="app_name",
+        required=True,
+        help="App name",
+        default=config.SHIFTLEFT_APP,
     )
     parser.add_argument("--version", dest="app_version", help="App Version")
     parser.add_argument("--branch", dest="app_branch", help="App Branch")
@@ -74,7 +79,12 @@ def main():
         LOG.debug(f"JSON report successfully exported to {src_file}")
     LOG.debug(f"About to convert {src_file}")
     sarif_data = convertLib.convert_file(
-        "ng-sast", os.getenv("TOOL_ARGS", ""), work_dir, src_file, report_file, None,
+        "ng-sast",
+        os.getenv("TOOL_ARGS", ""),
+        work_dir,
+        src_file,
+        report_file,
+        None,
     )
     if sarif_data:
         LOG.info(f"SARIF and html file created: {report_file} {html_file}")
