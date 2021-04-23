@@ -94,11 +94,13 @@ def get_all_findings(org_id, app_name, version, branch):
                     )
                     if raw_response.get("next_page"):
                         findings_url = raw_response.get("next_page")
+                        page_available = True
                     else:
                         page_available = False
             else:
                 print(f"Unable to retrieve findings for {app_name}")
                 print(r.status_code, r.json())
+                page_available = False
         progress.stop()
     return findings_list
 
