@@ -18,7 +18,7 @@ def build_args():
     Constructs command line arguments for the vulndb tool
     """
     parser = argparse.ArgumentParser(
-        description="Utility script to convert ShiftLeft NG SAST json output to sarif and html format."
+        description="Utility script to convert ShiftLeft CORE json output to sarif and html format."
     )
     parser.add_argument(
         "-a",
@@ -79,7 +79,7 @@ def main():
         LOG.debug(f"JSON report successfully exported to {src_file}")
     LOG.debug(f"About to convert {src_file}")
     sarif_data = convertLib.convert_file(
-        "ng-sast",
+        "core",
         os.getenv("TOOL_ARGS", ""),
         work_dir,
         src_file,
