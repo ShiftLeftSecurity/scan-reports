@@ -7,3 +7,7 @@ This is a library for producing html reports from ShiftLeft Scan or AppThreat sc
 ```bash
 pip install shiftleft-scan-reports
 ```
+
+```bash
+slreporter -a <app_name> -o <Output>
+```

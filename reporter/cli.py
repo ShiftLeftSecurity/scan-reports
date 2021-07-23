@@ -11,6 +11,7 @@ from joern2sarif.lib import convert as convertLib
 from reporter import config as config
 from reporter import sarif as sarif
 from reporter.common import LOG, extract_org_id, get_all_findings
+from reporter import gh as githubLib
 
 
 def build_args():
@@ -36,6 +37,13 @@ def build_args():
         dest="reports_dir",
         default="reports",
         help="Report directory",
+    )
+    parser.add_argument(
+        "--annotate-pr",
+        dest="annotate_pr",
+        help="Annotate pull request (GitHub only)",
+        action="store_true",
+        default=False,
     )
     return parser.parse_args()
 
@@ -64,7 +72,6 @@ def main():
             "Ensure the environment varibale SHIFTLEFT_ACCESS_TOKEN is copied exactly as-is from the website"
         )
         sys.exit(1)
-
     # Create reports directory
     if not os.path.exists(reports_dir):
         os.makedirs(reports_dir)
@@ -73,6 +80,8 @@ def main():
     findings_list = get_all_findings(
         org_id, args.app_name, args.app_version, args.app_branch
     )
+    if args.annotate_pr:
+        githubLib.annotate(findings_list)
     findings_dict[args.app_name] = findings_list
     with open(src_file, mode="w") as rp:
         json.dump(findings_dict, rp, ensure_ascii=True, indent=config.json_indent)
