@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="shiftleft-scan-reports",
-    version="1.4.0",
+    version="1.4.1",
     author="Team ShiftLeft",
     author_email="hello@shiftleft.io",
     description="Library for producing SARIF & html reports from ShiftLeft or AppThreat scan results",
@@ -15,7 +15,7 @@ setuptools.setup(
     url="https://github.com/ShiftLeftSecurity/scan-reports",
     packages=setuptools.find_packages(),
     include_package_data=True,
-    install_requires=["Jinja2", "markdown", "requests", "rich", "pyjwt", "joern2sarif"],
+    install_requires=["Jinja2", "markdown", "requests", "rich", "pyjwt", "joern2sarif", "PyGitHub"],
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
