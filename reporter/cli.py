@@ -9,9 +9,9 @@ import sys
 from joern2sarif.lib import convert as convertLib
 
 from reporter import config as config
+from reporter import gh as githubLib
 from reporter import sarif as sarif
 from reporter.common import LOG, extract_org_id, get_all_findings
-from reporter import gh as githubLib
 
 
 def build_args():

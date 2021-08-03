@@ -1,12 +1,13 @@
 import logging
 
-from reporter import config as config
 import jwt
 import requests
 from rich.console import Console
 from rich.logging import RichHandler
 from rich.progress import Progress
 from rich.theme import Theme
+
+from reporter import config as config
 
 custom_theme = Theme({"info": "cyan", "warning": "purple4", "danger": "bold red"})
 console = Console(

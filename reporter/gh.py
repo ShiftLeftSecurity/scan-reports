@@ -1,8 +1,8 @@
 import os
 
-from reporter.common import LOG
-
 from github import Github
+
+from reporter.common import LOG
 
 
 def get_user(gh):
@@ -46,6 +46,8 @@ def get_workflow(g, github_context):
 
 
 def client():
+    user = None
+    gh = None
     if not os.getenv("GITHUB_TOKEN"):
         LOG.info(
             "Please ensure GITHUB_TOKEN environment variable is set with permissions to read/write to pull requests"
@@ -54,20 +56,23 @@ def client():
     try:
         gh = Github(os.getenv("GITHUB_TOKEN"))
         user = get_user(gh)
-        if not user and os.getenv("GITHUB_SERVER_URL"):
-            gh = Github(
-                base_url=f"{os.getenv('GITHUB_SERVER_URL')}/api/v3",
-                login_or_token=os.getenv("GITHUB_TOKEN"),
-            )
-            user = get_user(gh)
-            if not user:
+    except Exception:
+        LOG.debug("Trying GitHub Enterprise authentication")
+        try:
+            if os.getenv("GITHUB_SERVER_URL"):
+                gh = Github(
+                    base_url=f"{os.getenv('GITHUB_SERVER_URL')}/api/v3",
+                    login_or_token=os.getenv("GITHUB_TOKEN"),
+                )
+                user = get_user(gh)
+            else:
                 LOG.info(
                     "Please ensure GITHUB_SERVER_URL environment variable is set to your enterprise server url. Eg: https://github.yourorg.com"
                 )
-        return gh
-    except Exception as e:
-        LOG.error(e)
-        return None
+        except Exception:
+            LOG.error(e)
+            return None
+    return gh
 
 
 def annotate(findings):
