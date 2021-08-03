@@ -46,7 +46,6 @@ def get_workflow(g, github_context):
 
 
 def client():
-    user = None
     gh = None
     if not os.getenv("GITHUB_TOKEN"):
         LOG.info(
@@ -55,7 +54,7 @@ def client():
         return None
     try:
         gh = Github(os.getenv("GITHUB_TOKEN"))
-        user = get_user(gh)
+        get_user(gh)
     except Exception:
         LOG.debug("Trying GitHub Enterprise authentication")
         try:
@@ -64,12 +63,12 @@ def client():
                     base_url=f"{os.getenv('GITHUB_SERVER_URL')}/api/v3",
                     login_or_token=os.getenv("GITHUB_TOKEN"),
                 )
-                user = get_user(gh)
+                get_user(gh)
             else:
                 LOG.info(
                     "Please ensure GITHUB_SERVER_URL environment variable is set to your enterprise server url. Eg: https://github.yourorg.com"
                 )
-        except Exception:
+        except Exception as e:
             LOG.error(e)
             return None
     return gh
@@ -78,7 +77,6 @@ def client():
 def annotate(findings):
     github_context = get_context()
     g = client()
-    repo = g.get_repo(github_context.get("repoFullname"))
     workflow_run = get_workflow(g, github_context)
     if not workflow_run:
         LOG.info("Unable to find the workflow run for this invocation")

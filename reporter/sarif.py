@@ -1,6 +1,5 @@
 import json
 import logging
-from collections import defaultdict
 from os.path import basename
 
 import markdown
