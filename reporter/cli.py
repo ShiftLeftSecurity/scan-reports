@@ -77,11 +77,11 @@ def main():
         os.makedirs(reports_dir)
     LOG.debug(f"About to retrieve findings for {args.app_name}")
     findings_dict = {}
-    findings_list = get_all_findings(
+    findings_list, scan_info = get_all_findings(
         org_id, args.app_name, args.app_version, args.app_branch
     )
     if args.annotate_pr:
-        githubLib.annotate(findings_list)
+        githubLib.annotate(findings_list, scan_info)
     findings_dict[args.app_name] = findings_list
     with open(src_file, mode="w") as rp:
         json.dump(findings_dict, rp, ensure_ascii=True, indent=config.json_indent)
