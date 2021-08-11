@@ -72,6 +72,7 @@ def get_all_findings(org_id, app_name, version, branch):
         findings_list = []
         findings_url = get_findings_url(org_id, app_name, version, branch)
         page_available = True
+        scan = {}
         while page_available:
             # print (findings_url)
             r = requests.get(findings_url, headers=headers)
@@ -103,7 +104,7 @@ def get_all_findings(org_id, app_name, version, branch):
                 print(r.status_code, r.json())
                 page_available = False
         progress.stop()
-    return findings_list
+    return findings_list, scan
 
 
 def get_dataflow(org_id, app_name, finding_id):

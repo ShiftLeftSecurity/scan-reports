@@ -53,30 +53,37 @@ def client():
         )
         return None
     try:
-        gh = Github(os.getenv("GITHUB_TOKEN"))
-        get_user(gh)
-    except Exception:
-        LOG.debug("Trying GitHub Enterprise authentication")
-        try:
-            if os.getenv("GITHUB_SERVER_URL"):
-                gh = Github(
-                    base_url=f"{os.getenv('GITHUB_SERVER_URL')}/api/v3",
-                    login_or_token=os.getenv("GITHUB_TOKEN"),
-                )
-                get_user(gh)
-            else:
-                LOG.info(
-                    "Please ensure GITHUB_SERVER_URL environment variable is set to your enterprise server url. Eg: https://github.yourorg.com"
-                )
-        except Exception as e:
-            LOG.error(e)
+        # Try GitHub enterprise first
+        server_url = os.getenv("GITHUB_SERVER_URL")
+        if server_url and server_url != "https://github.com":
+            if not server_url.startswith("http"):
+                server_url = "https://" + server_url
+            if not server_url.endswith("/"):
+                server_url = server_url + "/"
+            LOG.info("Authenticating to GitHub Enterprise server: " + server_url)
+            gh = Github(
+                base_url=f"{server_url}api/v3",
+                login_or_token=os.getenv("GITHUB_TOKEN"),
+            )
+        else:
+            # Fallback to public GitHub
+            gh = Github(os.getenv("GITHUB_TOKEN"))
+        user = get_user(gh)
+        if not user:
             return None
+    except Exception as e:
+        LOG.error(e)
+        return None
     return gh
 
 
-def annotate(findings):
+def annotate(findings, scan_info):
     github_context = get_context()
+    scan_version = scan_info.get("version")
     g = client()
+    if not g:
+        LOG.info("Unable to authenticate with GitHub. Skipping PR annotation")
+        return
     workflow_run = get_workflow(g, github_context)
     if not workflow_run:
         LOG.info("Unable to find the workflow run for this invocation")
@@ -102,6 +109,10 @@ def annotate(findings):
                 file_locations = details.get("file_locations")
                 owasp_category = f.get("owasp_category")
                 severity = f.get("severity")
+                version_first_seen = f.get("version_first_seen")
+                # Ignore legacy findings
+                if version_first_seen != scan_version:
+                    continue
                 # Ignore sensitive data exposure
                 if "a3-" in owasp_category or severity in ("INFO"):
                     continue
