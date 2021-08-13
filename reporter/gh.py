@@ -15,7 +15,6 @@ def get_context():
         "runID": os.getenv("GITHUB_RUN_ID"),
         "repoFullname": os.getenv("GITHUB_REPOSITORY"),
         "triggerEvent": os.getenv("GITHUB_EVENT_NAME"),
-        "apiUrl": os.getenv("GITHUB_API_URL"),
         "headRef": os.getenv("GITHUB_HEAD_REF"),
         "baseRef": os.getenv("GITHUB_BASE_REF"),
         "githubToken": os.getenv("GITHUB_TOKEN"),
@@ -25,8 +24,6 @@ def get_context():
         "actionId": os.getenv("GITHUB_ACTION"),
         "trigger": os.getenv("GITHUB_ACTOR"),
         "triggerBranchTag": os.getenv("GITHUB_REF"),
-        "serverUrl": os.getenv("GITHUB_SERVER_URL"),
-        "graphqlUrl": os.getenv("GITHUB_GRAPHQL_URL"),
         "triggerPath": os.getenv("GITHUB_EVENT_PATH"),
     }
 
@@ -54,7 +51,10 @@ def client():
         return None
     try:
         # Try GitHub enterprise first
-        server_url = os.getenv("GITHUB_SERVER_URL")
+        # Variables beginning with GITHUB_ cannot be overridden
+        server_url = os.getenv("GH_SERVER_URL")
+        if not server_url:
+            server_url = os.getenv("GITHUB_SERVER_URL")
         if server_url and server_url != "https://github.com":
             if not server_url.startswith("http"):
                 server_url = "https://" + server_url
