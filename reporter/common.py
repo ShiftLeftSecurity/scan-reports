@@ -40,12 +40,12 @@ headers = {
 def get_findings_url(org_id, app_name, version, branch):
     version_suffix = f"&version={version}" if version else ""
     branch_suffix = f"&tags=branch={branch}" if branch else ""
-    return f"https://www.shiftleft.io/api/v4/orgs/{org_id}/apps/{app_name}/findings?per_page=249&type=secret&type=vuln&type=extscan&include_dataflows=true{version_suffix}{branch_suffix}"
+    return f"https://app.shiftleft.io/api/v4/orgs/{org_id}/apps/{app_name}/findings?per_page=249&type=secret&type=vuln&type=extscan&include_dataflows=true{version_suffix}{branch_suffix}"
 
 
 def get_all_apps(org_id):
     """Return all the apps for the given organization"""
-    list_apps_url = f"https://www.shiftleft.io/api/v4/orgs/{org_id}/apps"
+    list_apps_url = f"https://app.shiftleft.io/api/v4/orgs/{org_id}/apps"
     r = requests.get(list_apps_url, headers=headers)
     if r.ok:
         raw_response = r.json()
@@ -108,7 +108,7 @@ def get_all_findings(org_id, app_name, version, branch):
 
 
 def get_dataflow(org_id, app_name, finding_id):
-    finding_url = f"https://www.shiftleft.io/api/v4/orgs/{org_id}/apps/{app_name}/findings/{finding_id}?include_dataflows=true"
+    finding_url = f"https://app.shiftleft.io/api/v4/orgs/{org_id}/apps/{app_name}/findings/{finding_id}?include_dataflows=true"
     r = requests.get(finding_url, headers=headers)
     if r.ok:
         raw_response = r.json()
