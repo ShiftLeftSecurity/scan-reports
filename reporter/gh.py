@@ -117,7 +117,7 @@ def annotate(findings, scan_info):
                 if "a3-" in owasp_category or severity in ("INFO"):
                     continue
                 if file_locations:
-                    deep_link = f"https://www.shiftleft.io/findingDetail/{f.get('app')}/{f.get('id')}"
+                    deep_link = f"https://app.shiftleft.io/findingDetail/{f.get('app')}/{f.get('id')}"
                     body = f'{f.get("title")}\n**Severity:** {severity}\n**OWASP Category:** {owasp_category}\n\n**Finding Link:** {deep_link}'
                     source_loc = file_locations[0].split(":")
                     source_path = source_loc[0]
