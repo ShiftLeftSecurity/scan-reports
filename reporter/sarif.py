@@ -3,7 +3,8 @@ import logging
 from os.path import basename
 
 import markdown
-from jinja2 import Environment, Markup, PackageLoader, exceptions, select_autoescape
+from jinja2 import Environment, PackageLoader, exceptions, select_autoescape
+from markupsafe import Markup
 
 from reporter.utils import (
     auto_colourize,
